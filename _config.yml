@@ -2,15 +2,4 @@ title: Kaan Koca
 theme: jekyll-theme-minimal
 #logo: /assets/logo.png
 #show_downloads:true
-
 description: "This page includes computer science topics."
-nav:
-  - name: Home
-    link: /README.md
-  - name: Projects
-    link: /projects.md
-header_pages:
-- pa
-rojects.md
--
-    
