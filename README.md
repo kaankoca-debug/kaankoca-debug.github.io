@@ -10,14 +10,10 @@ Bu projeyi yapma amacım CS Principles Dersi'nde GitHub'dan bir web sitesi yapma
   
 # Projects:
 
-<br>
-
-## [Scratch](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Block_Coding)
-
-- Tic Tac Toe
+## [Projects](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects)
 
 <br>
 
-## [Swift](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Swift_Projects)
+## [Scratch](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Block_Coding)
 
--Box App
+## [Swwift App](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
