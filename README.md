@@ -24,6 +24,4 @@ Bu projeyi yapma amacım CS Principles Dersi'nde GitHub'dan bir web sitesi yapma
 
 ## [Scratch Video](https://drive.google.com/file/d/1gfkClsnsi_kvz91xjAdyCGXrz0tZLPny/view?usp=sharing)
 
-<br>
-
 ## [Swift App Video](https://drive.google.com/file/d/1V3elbn8_UBh9dNDeWAhdtWxGoYbjAoe-/view?usp=sharing)
