@@ -16,6 +16,8 @@ Bu projeyi yapma amacım CS Principles Dersi'nde GitHub'dan bir web sitesi yapma
 
 ## [Swift App](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
 
+<br>
+
 # **[Resources](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Resources)**
 
 <br>
