@@ -2,7 +2,7 @@
 
 # GitHub Pages
 
-Bu projeyi yapma amacım CS Principles Dersi'nde GitHub'dan bir web sitesi yapmayı öğrenmeye çalışma amacım ve isteğimdir. Yani bu yaptığım ilk web site ve yeni şeyler öğrenmek için bu projeyi yapıyorum. 
+The reason I'm doing this project is because I wanted to learn how to create a website from GitHub in my CS Principles course. So, this is the first website I've made, and I'm doing this project to deepen my horizons. 
 
 ## Kaan Koca Hisar CS
 
