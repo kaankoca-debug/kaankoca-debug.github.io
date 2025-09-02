@@ -7,13 +7,11 @@ Bu projeyi yapma amacım CS Principles Dersi'nde GitHub'dan bir web sitesi yapma
 ## Kaan Koca Hisar CS
 
 <br>
-  
-# Projects:
 
-## [Projects](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects)
+# **[Projects](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects)**
 
 <br>
 
 ## [Scratch](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Block_Coding)
 
-## [Swwift App](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
+## [Swift App](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
