@@ -12,7 +12,7 @@ The reason I'm doing this project is because I wanted to learn how to create a w
 
 <br>
 
-## [Scratch](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Block_Coding)
+## [Scratch](https://scratch.mit.edu/projects/1212334765)
 
 ## [Swift App](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
 
