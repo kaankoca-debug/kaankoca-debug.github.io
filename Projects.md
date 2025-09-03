@@ -1,3 +1,5 @@
+**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)**
+
 # **[Projects](Projects.md)**
 
 <br>
