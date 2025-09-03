@@ -10,6 +10,6 @@
 
 ## [Swift Tic Tac Toe](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
 
-<img src="Swift_Game.png" width="600">
+<img src="PHOTO&GIF/Swift_Game.png" width="600">
 
 <br>
