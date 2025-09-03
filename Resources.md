@@ -4,6 +4,6 @@
 
 <br>
 
-## [Scratch Video](https://drive.google.com/file/d/1gfkClsnsi_kvz91xjAdyCGXrz0tZLPny/view?usp=sharing)
+## [Scratch Tic Tac Toe Video](https://drive.google.com/file/d/1gfkClsnsi_kvz91xjAdyCGXrz0tZLPny/view?usp=sharing)
 
 ## [Swift App Video](https://drive.google.com/file/d/1V3elbn8_UBh9dNDeWAhdtWxGoYbjAoe-/view?usp=sharing)
