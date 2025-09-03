@@ -1,4 +1,4 @@
-**[home](README.md) | [projects](Projects.md) | [resources](Resources.md)**
+**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)**
 
 # GitHub Pages
 
@@ -8,7 +8,7 @@ The reason I'm doing this project is because I wanted to learn how to create a w
 
 <br>
 
-# **[Projects](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects)**
+# **[Projects](Projects.md)**
 
 <br>
 
