@@ -1,4 +1,4 @@
-![Kaan Koca](assets/profil.png)
+**[home](README.md) | [projects](Projects.md) | [resources](Resources.md)**
 
 # GitHub Pages
 
@@ -14,7 +14,11 @@ The reason I'm doing this project is because I wanted to learn how to create a w
 
 ## [Scratch](https://scratch.mit.edu/projects/1212334765)
 
+<img src="Scratch_Game.png" width="300">
+
 ## [Swift App](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
+
+<img src="Swift_Game.png" width="300">
 
 <br>
 
