@@ -18,7 +18,7 @@ The reason I'm doing this project is because I wanted to learn how to create a w
 
 <br>
 
-# **[Resources](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Resources)**
+# **[Resources](https://docs.google.com/document/d/1qp5z8rpjl3zc5CKJ4CeFLyZyhte-Nw1LNsDXgIS3t8E/edit?usp=sharing)**
 
 <br>
 
