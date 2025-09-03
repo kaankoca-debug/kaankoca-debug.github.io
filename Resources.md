@@ -1,4 +1,4 @@
-**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)**
+**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)** | **[Documentary](Documentary.md)**
 
 # **[Resources](https://drive.google.com/drive/folders/1p5AxCkzE-_u20Dovth-Wle09ownV2CCK?usp=drive_link)**
 
