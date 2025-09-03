@@ -4,11 +4,11 @@
 
 <br>
 
-## [Scratch](https://scratch.mit.edu/projects/1212334765)
+## [Scratch Tic Tac Toe](https://scratch.mit.edu/projects/1212334765)
 
 <img src="Scratch_Game.png" width="300">
 
-## [Swift App](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
+## [Swift Tic Tac Toe](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
 
 <img src="Swift_Game.png" width="300">
 
