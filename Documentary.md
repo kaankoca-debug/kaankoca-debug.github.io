@@ -6,33 +6,36 @@
 
 ## Scratch Tic Tac Toe 
 
+<img src="PHOTO&GIF/1-XOX-Documentary.png" width="600">  <img src="PHOTO&GIF/2-XOX-Documentary.png" width="600">  <img src="PHOTO&GIF/3-XOX-Documentary.png" width="600">
+
+<br>
 
 ## Swift Box/Tic Tac Toe
 
-<img src="Box-Documentary.png" width="600">
+<img src="PHOTO&GIF/Box-Documentary.png" width="600">
 
 <br>
 
 ## Swift Favorites
 
-<img src="Favorites-Documentary.png" width="600">
+<img src="PHOTO&GIF/Favorites-Documentary.png" width="600">
 
 <br>
 
 ## Swift Ice Cream Shop
 
-<img src="Ice Cream-Documentary.png" width="600">
+<img src="PHOTO&GIF/Ice Cream-Documentary.png" width="600">
 
 <br>
 
 ## Swift Hamburger Cafe
 
-<img src="Hamburger Cafe-Documentary.png" width="600">
+<img src="PHOTO&GIF/Hamburger Cafe-Documentary.png" width="600">
 
 <br>
 
 ## Swift Calculator
 
-<img src="1-Calculator-Documentary.png" width="600">  <img src="2-Calculator_Documentary.png" width="600">
+<img src="PHOTO&GIF/1-Calculator-Documentary.png" width="600">  <img src="PHOTO&GIF/2-Calculator_Documentary.png" width="600">
 
 <br>
