@@ -1,6 +1,6 @@
 **[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)**
 
-# **[Resources](https://docs.google.com/document/d/1qp5z8rpjl3zc5CKJ4CeFLyZyhte-Nw1LNsDXgIS3t8E/edit?usp=sharing)**
+# **[Resources](https://drive.google.com/drive/folders/1p5AxCkzE-_u20Dovth-Wle09ownV2CCK?usp=drive_link)**
 
 <br>
 
