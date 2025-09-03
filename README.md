@@ -9,25 +9,3 @@ The reason I'm doing this project is because I wanted to learn how to create a w
 <img src="IMG_1866.jpeg" width="175">
 
 <br>
-
-# **[Projects](Projects.md)**
-
-<br>
-
-## [Scratch](https://scratch.mit.edu/projects/1212334765)
-
-<img src="Scratch_Game.png" width="300">
-
-## [Swift App](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift)
-
-<img src="Swift_Game.png" width="300">
-
-<br>
-
-# **[Resources](https://drive.google.com/drive/folders/1p5AxCkzE-_u20Dovth-Wle09ownV2CCK?usp=drive_link)**
-
-<br>
-
-## [Scratch Video](https://drive.google.com/file/d/1gfkClsnsi_kvz91xjAdyCGXrz0tZLPny/view?usp=sharing)
-
-## [Swift App Video](https://drive.google.com/file/d/1V3elbn8_UBh9dNDeWAhdtWxGoYbjAoe-/view?usp=sharing)
