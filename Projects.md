@@ -1,4 +1,4 @@
-**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)**
+**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)** | **[Documentary](Documentary.md)**
 
 # **[Projects](Projects.md)**
 
