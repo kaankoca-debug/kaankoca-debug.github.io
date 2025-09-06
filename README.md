@@ -6,6 +6,6 @@ The reason I'm doing this project is because I wanted to learn how to create a w
 
 ## Kaan Koca Hisar CS
 
-<img src="PHOTO&GIF/IMG_1866.jpeg" width="175">
+<img src="IMG_1866.jpeg" width="175">
 
 <br>
