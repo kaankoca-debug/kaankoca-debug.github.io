@@ -6,7 +6,7 @@
 
 ## Scratch Tic Tac Toe 
 
-<img src="PHOTO&GIF/1-XOX-Documentary.png" width="600">  <img src="PHOTO&GIF/2-XOX-Documentary.png" width="600">  <img src="PHOTO&GIF/3-XOX-Documentary.png" width="600">
+<img src="PHOTO&GIF/Scratch-1-XOX-Documentary.png" width="600">  <img src="PHOTO&GIF/Scratch-2-XOX-Documentary.png" width="600">  <img src="PHOTO&GIF/Scratch-3-XOX-Documentary.png" width="600">
 
 <br>
 
