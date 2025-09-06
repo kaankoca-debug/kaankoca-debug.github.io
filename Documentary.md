@@ -175,7 +175,7 @@ struct ContentView: View {
 
 ## Swift Hamburger Cafe
 
-<img src="PHOTO&GIF/Swift-Ice Cream-Documentary_App5.png" width="600">
+<img src="PHOTO&GIF/Swift-Burger-Cafe-Documentary_App6.png" width="600">
 
 //2 September 2025
 
