@@ -6,7 +6,7 @@
 
 ## [Scratch Tic Tac Toe](https://scratch.mit.edu/projects/1212334765)
 
-![XOXpreview](PHOTO&GIF/Scratch Game GIF)
+![XOXpreview](giphy.gif)
 
 <br>
 
