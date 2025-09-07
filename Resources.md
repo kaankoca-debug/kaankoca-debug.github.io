@@ -17,3 +17,5 @@
 ## [Swift Calculator Tutorial](https://drive.google.com/file/d/1ZEjma1byEGi2mIqcwui0J0XDDFChU4LS/view?usp=sharing)
 
 ## [Swift Profile Tutorial](https://drive.google.com/file/d/1nMW0OzAEId4sp92xF2HeOlpDCSWU51Iq/view?usp=sharing)
+
+## [Swift Clock Tutorial](https://drive.google.com/file/d/1JS0MPhNb1noNHLS3qP8fWOLMggaVIMJv/view?usp=sharing)
