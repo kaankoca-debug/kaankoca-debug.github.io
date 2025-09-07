@@ -398,3 +398,136 @@ struct ContentView: View {
 
 
 <br>
+
+## Swift Clock
+
+<img src="PHOTO&GIF/Swift-1-Clock-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-2-Clock-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-3-Clock-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-4-Clock-Documentary.png" width="600">
+
+//4 September 2025
+
+import SwiftUI
+
+struct ContentView: View {
+
+    @State private var hour: Int = 12
+    @State private var minute: Int = 0
+
+    var AMPM: Bool {
+        return hour < 12
+    }
+    var hourangle: Double {
+        return Double(hour % 12) * 30 + Double(minute) * 0.5
+    }
+    var minangle: Double {
+        return Double(minute) * 6
+    }
+    
+    var body: some View {
+        let backcolor = AMPM ? Color.yellow : Color.indigo.opacity(0.5)
+       
+            ZStack {
+                Text("Hour: \(hour % 12 == 0 ? 12 : hour % 12)")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.blue)
+                    .offset(y:200)
+                
+                Text("Minutes: \(minute)")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.blue)
+                    .offset(y:250)
+                
+                Text(AMPM ? "AM" : "PM")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.blue)
+                    .offset(y:300)
+                
+                Button("- Hour") {
+                    hour = (hour - 1 + 24) % 24
+                }
+                    .padding()
+                    .foregroundColor(.green)
+                    .bold()
+                    .offset(y:-200)
+                    .offset(x:100)
+                        
+                Button("+ Hour") {
+                    hour = (hour + 1) % 24
+                }
+                    .padding()
+                    .foregroundColor(.green)
+                    .bold()
+                    .offset(y:-200)
+                    .offset(x:-100)
+               
+                Button("- Minute") {
+                        minute = (minute - 1 + 60) % 60
+                }
+                    .padding()
+                    .foregroundColor(.green)
+                    .bold()
+                    .offset(y:-300)
+                    .offset(x:-100)
+                
+                Button("+ Minute") {
+                    minute = (minute + 1) % 60
+                }
+                    .padding()
+                    .foregroundColor(.green)
+                    .bold()
+                    .offset(y:-300)
+                    .offset(x:100)
+            
+                
+                backcolor
+                    .ignoresSafeArea()
+            
+                
+                Circle()
+                    .fill(Color.white)
+                    .frame(width: 300, height: 300)
+                
+                
+                RoundedRectangle(cornerRadius: 25.0)
+                    .fill(Color.yellow)
+                    .frame(width: 15, height: 100)
+                    .offset(y: -62)
+                    .rotationEffect(.degrees(minangle))
+                    
+            
+                RoundedRectangle(cornerRadius: 25.0)
+                    .fill(Color.blue)
+                    .frame(width: 15, height: 75)
+                    .offset(y: -50)
+                    .rotationEffect(.degrees(hourangle))
+                
+                Circle()
+                    .fill(Color.blue)
+                    .frame(width: 15, height: 15)
+                
+                
+                ForEach(0..<12) { i in
+                    Rectangle()
+                        .fill(Color.black)
+                        .frame(width: 2, height: 15)
+                        .offset(y: -135)
+                        .rotationEffect(.degrees(Double(i) * 30))
+                }
+            }
+        
+        .onTapGesture {
+            minute += 1
+            if minute == 60 {
+                minute = 0
+                hour = (hour + 1) % 24
+            }
+        }
+        .animation(.easeInOut(duration: 0.5), value: hourangle + minangle)
+    }
+}
+          
+    
+
+
