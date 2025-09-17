@@ -14,11 +14,11 @@
 
 <img src="PHOTO&GIF/Swift-Box-Documentary_App3.png" width="600">
 
-//1 September 2025
+    //1 September 2025
 
-import SwiftUI
+    import SwiftUI
 
-struct ContentView: View {
+    struct ContentView: View {
 
     var body: some View {
     
@@ -107,7 +107,7 @@ struct ContentView: View {
                 .offset(x:-250,y:-250)
         }
     }
-}
+    }
 
 
 <br>
@@ -116,11 +116,11 @@ struct ContentView: View {
 
 <img src="PHOTO&GIF/Swift-Favorites-Documentary_App4.png" width="600">
 
-//1 September 2025
+    //1 September 2025
 
-import SwiftUI
+    import SwiftUI
 
-struct ContentView: View {
+    struct ContentView: View {
 
     var favoriteEmoji = "😡"
     let favoriteNumber = 3
@@ -134,7 +134,7 @@ struct ContentView: View {
         }
        
     }
-}
+    }
 
 
 <br>
@@ -143,11 +143,11 @@ struct ContentView: View {
 
 <img src="PHOTO&GIF/Swift-Ice Cream-Documentary_App5.png" width="600">
 
-//1 September 2025
+    //1 September 2025
 
-import SwiftUI
+    import SwiftUI
 
-struct ContentView: View {
+    struct ContentView: View {
 
     var body: some View{
     
@@ -168,7 +168,7 @@ struct ContentView: View {
         }
                 
     }
-}
+    }
 
 
 <br>
@@ -177,11 +177,11 @@ struct ContentView: View {
 
 <img src="PHOTO&GIF/Swift-Burger-Cafe-Documentary_App6.png" width="600">
 
-//2 September 2025
+    //2 September 2025
 
-import SwiftUI
+    import SwiftUI
 
-struct ContentView: View {
+    struct ContentView: View {
 
     var body: some View {
         let ham = 68
@@ -210,7 +210,7 @@ struct ContentView: View {
         }
         
     }
-}
+    }
 
 
 <br>
@@ -219,11 +219,11 @@ struct ContentView: View {
 
 <img src="PHOTO&GIF/Swift-1-Calculator-Documentary_App7.png" width="600">  <img src="PHOTO&GIF/Swift-2-Calculator_Documentary_App7.png" width="600">
 
-//3 September 2025
+    //3 September 2025
 
-import SwiftUI
+    import SwiftUI
 
-struct ContentView: View {
+    struct ContentView: View {
 
     @State private var number1 = ""
     @State private var number2 = ""
@@ -297,7 +297,7 @@ struct ContentView: View {
     }
     
     
-}
+    }
 
 
 <br>
@@ -306,11 +306,11 @@ struct ContentView: View {
 
 <img src="PHOTO&GIF/Swift-1-Profile-Documentary_App7.png" width="600">  <img src="PHOTO&GIF/Swift-2-Profile-Documentary_App8.png" width="600">
 
-//4 September 2025
+    //4 September 2025
 
-import SwiftUI
+    import SwiftUI
 
-struct ContentView: View {
+    struct ContentView: View {
 
     var body: some View {
         ZStack{
@@ -394,7 +394,7 @@ struct ContentView: View {
             //The team number
         }
     }
-}
+    }
 
 
 <br>
@@ -403,11 +403,11 @@ struct ContentView: View {
 
 <img src="PHOTO&GIF/Swift-1-Clock-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-2-Clock-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-3-Clock-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-4-Clock-Documentary.png" width="600">
 
-//4 September 2025 
+    //4 September 2025 
 
-import SwiftUI
+    import SwiftUI
 
-struct ContentView: View {
+    struct ContentView: View {
 
     @State private var clockHour: Int = 12
     @State private var clockMinute: Int = 0
@@ -545,4 +545,215 @@ struct ContentView: View {
         .animation(.easeInOut(duration: 0.4), value: clockHour + clockMinute)
         //This is an animation that makes the movement of the hour and minute hands in the clock to move more smoothly. 
     }
-}
+    }
+
+<br>
+
+## Swift Ben Ten Watch
+
+<img src="PHOTO&GIF/Swift-1-BenTen-Documentary_App6.png" width="600">  <img src="PHOTO&GIF/Swift-2-BenTen-Documentary_App6.png" width="600">  <img src="PHOTO&GIF/Swift-3-BenTen-Documentary_App6.png" width="600">  <img src="PHOTO&GIF/Swift-4-BenTen-Documentary_App6.png" width="600"> <img src="PHOTO&GIF/Swift-5-BenTen-Documentary_App6.png" width="600">  <img src="PHOTO&GIF/Swift-6-BenTen-Documentary_App6.png" width="600">
+
+    //12/07/2025
+
+    import SwiftUI
+
+    struct ContentView: View {
+
+    @State private var showFirstWatch = true 
+    @State private var hour: Int = 0
+    @State private var minute: Int = 0
+    
+    private var isAM: Bool { (hour % 24) < 12 }
+    private var minuteAngle: Double { Double(minute) * 6 }
+    private var hourAngle: Double { Double(hour % 12) * 30 + Double(minute) * 0.5 }
+    
+    var body: some View {
+        ZStack {
+
+            if showFirstWatch {
+   
+                ZStack {
+                    Color.indigo.opacity(0.3).ignoresSafeArea()
+
+                    Circle()
+                        .frame(width: 288)
+                        .foregroundColor(.black)
+                        .shadow(radius: 10)
+
+                    
+                    Image(systemName: "triangle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 143, height: 143)
+                        .foregroundColor(.green)
+                        .rotationEffect(.degrees(180))
+                        .offset(y: -59)
+
+                    Image(systemName: "triangle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 143, height: 143)
+                        .foregroundColor(.green)
+                        .offset(y: 59)
+
+                    Circle()
+                        .stroke(.green.opacity(1), lineWidth: 23.5)
+                        .frame(width: 250)
+
+                    Rectangle()
+                        .frame(width: 5, height: 120)
+                        .offset(y: -60)
+                        .rotationEffect(.degrees(minuteAngle))
+                        .animation(.easeInOut(duration: 0.4), value: minuteAngle)
+  
+                    Rectangle()
+                        .frame(width: 8, height: 60)
+                        .offset(y: -30)
+                        .rotationEffect(.degrees(hourAngle))
+                        .animation(.easeInOut(duration: 0.4), value: hourAngle)
+
+                    Circle()
+                        .frame(width: 10, height: 10)
+
+                }
+            } else {
+
+                ZStack {
+                    BackgroundGears()
+
+                    Circle().stroke(.gray.opacity(0.6), lineWidth: 4)
+                        .frame(width: 288, height: 288)
+
+                    RotatingGear(size: 224, symbol: "gearshape", reverse: true,  color: .gray.opacity(0.55))
+                    RotatingGear(size: 128, symbol: "gearshape", reverse: false, color: .gray.opacity(0.65))
+                    RotatingGear(size: 64,  symbol: "gear",      reverse: false, color: .gray.opacity(0.7))
+                        .offset(x: 72, y: -72)
+                    RotatingGear(size: 48,  symbol: "gear",      reverse: true,  color: .gray.opacity(0.7))
+                        .offset(x: -56, y: 72)
+                    
+                    Hand(width: 5, length: 100, color: .white.opacity(0.85))
+                        .rotationEffect(.degrees(minuteAngle))
+                        .animation(.easeInOut(duration: 0.4), value: minuteAngle)
+
+                    Hand(width: 8, length: 60, color: .white)
+                        .rotationEffect(.degrees(hourAngle))
+                        .animation(.easeInOut(duration: 0.4), value: hourAngle)
+
+                    Circle()
+                        .fill(Color.green)
+                        .overlay(Circle().stroke(Color.black, lineWidth: 2))
+                        .frame(width: 16, height: 16)
+
+                }
+            }
+        }
+
+        .overlay(alignment: .bottom) {
+            VStack(spacing: 4) {
+                Text(isAM ? "a.m." : "p.m.")
+                    .foregroundStyle(.white.opacity(0.8))
+                Text("hour: \(hour), minute: \(minute)")
+                    .foregroundStyle(.white.opacity(0.8))
+
+            }
+            .padding(.bottom, 24)
+
+        }
+
+        .overlay(alignment: .topTrailing) {
+            Button(action: {
+                withAnimation(.easeInOut) {
+                    showFirstWatch.toggle()
+
+                }
+            }) {
+                Text("Switch Look")
+                    .font(.headline)
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .background(Color.black.opacity(0.7))
+                    .foregroundColor(.white)
+                    .clipShape(Capsule())
+
+            }
+            .padding()
+        }
+
+        .contentShape(Rectangle())
+        .onTapGesture {
+            withAnimation(.easeInOut(duration: 0.4)) {
+                minute += 15
+                if minute >= 60 {
+                    minute = 0
+                    hour = (hour + 1) % 24
+                    
+
+                }
+            }
+        }
+    }
+    }
+
+    private struct RotatingGear: View {
+    let size: CGFloat
+    let symbol: String
+    let reverse: Bool
+    let color: Color
+    var duration: Double = 20
+
+    
+    @State private var angle: Double = 0
+    
+    var body: some View {
+        Image(systemName: symbol)
+            .resizable()
+            .scaledToFit()
+            .frame(width: size, height: size)
+            .foregroundColor(color)
+            .rotationEffect(.degrees(angle))
+            .onAppear {
+                withAnimation(.linear(duration: duration).repeatForever(autoreverses: false)) {
+                    angle = reverse ? -360 : 360
+                    
+
+                    
+                    
+                }
+            }
+    }
+    }
+
+    private struct BackgroundGears: View {
+    var body: some View {
+        GeometryReader { geo in
+            ZStack {
+                RotatingGear(size: 180, symbol: "gearshape.fill", reverse: false, color: .gray.opacity(0.55))
+                    .position(x: -12, y: -12)
+                RotatingGear(size: 250, symbol: "gearshape.fill", reverse: true,  color: .gray.opacity(0.6))
+                    .position(x: geo.size.width + 16, y: 120)
+                RotatingGear(size: 220, symbol: "gearshape.fill", reverse: false, color: .gray.opacity(0.50))
+                    .position(x: -20, y: geo.size.height - 160)
+                RotatingGear(size: 150, symbol: "gearshape.fill", reverse: true,  color: .gray.opacity(0.65))
+                    .position(x: geo.size.width + 10, y: geo.size.height)
+                
+
+            }
+            .opacity(0.10)
+            .ignoresSafeArea()
+        }
+    }
+    }
+
+    private struct Hand: View {
+    let width: CGFloat
+    let length: CGFloat
+    let color: Color
+    
+    var body: some View {
+        Rectangle()
+            .fill(color)
+            .frame(width: width, height: length)
+            .offset(y: -length / 2)
+
+    }
+    }
