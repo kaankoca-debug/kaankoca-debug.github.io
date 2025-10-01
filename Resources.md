@@ -1,4 +1,4 @@
-**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)** | **[Documentary](Documentary.md)** | **[Big Ideas](Big_Ideas.md)**
+**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)** | **[Documentary](Documentary.md)** | **[Big Ideas](Big_Ideas.md)** | **[Data Compression](Data_Compression.md)**
 
 # **[Resources](https://drive.google.com/drive/folders/1p5AxCkzE-_u20Dovth-Wle09ownV2CCK?usp=drive_link)**
 
@@ -21,3 +21,7 @@
 ## [Swift Clock Tutorial](https://drive.google.com/file/d/1JS0MPhNb1noNHLS3qP8fWOLMggaVIMJv/view?usp=sharing)
 
 ## [Swift Ben Ten Watch Tutorial](https://drive.google.com/file/d/1SSmLzVopKC-WH3YJ7pXTg_ldFQTQ6gIi/view?usp=sharing)
+
+## [Data Compression Tutorial](https://drive.google.com/file/d/1lXhGSkKRAihrvn45rOoTiiHF-vhVIy0Z/view?usp=sharing)
+
+## [Data Compression Examples](https://drive.google.com/file/d/1utawaCcGORcyMXyUgyt_kRNo_883DSmn/view?usp=sharing)
