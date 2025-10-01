@@ -1,4 +1,4 @@
-**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)** | **[Documentary](Documentary.md)** | **[Big Ideas](Big_Ideas.md)**
+**[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)** | **[Documentary](Documentary.md)** | **[Big Ideas](Big_Ideas.md)** | **[Data Compression](Data_Compression.md)**
 
 # **[Projects](Projects.md)**
 
