@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Diff</key>
+	<array>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>//22 September 2025
+import Foundation
+</string>
+			<key>ModifiedRange</key>
+			<string>{0, 38}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{0, 0}</string>
+		</dict>
+		<dict>
+			<key>ModifiedContent</key>
+			<string>func decimalToBinary(_ number: Int) -&gt; String {
+    //I create a function that aims to turn decimals to binaries.
+    let kuvvet3 = (number / 8 ) % 2
+    let kuvvet2 = (number / 4 ) % 2
+    let kuvvet1 = (number / 2 ) % 2
+    let kuvvet0 = number % 2
+    //I create variables for the number being divided into the the powers of 2 and get the remainder which is 1 or 0. Which are the digits in binary numbers. 
+    
+      return "\(kuvvet3)\(kuvvet2)\(kuvvet1)\(kuvvet0)"
+    //This code puts all the digits together and prints them out as a string.
+}
+var id = 0
+for _ in 1...16 {
+    print("Decimal: \(id), Binary: \(decimalToBinary(id))")
+    id += 1
+    if id &gt; 15 {
+        id = 0
+        //This part repeats everything and prints everything until id (the variable created in here) becomes bigger than 15. 
+    }
+}
+</string>
+			<key>ModifiedRange</key>
+			<string>{39, 818}</string>
+			<key>OriginalContent</key>
+			<string></string>
+			<key>OriginalRange</key>
+			<string>{1, 0}</string>
+		</dict>
+	</array>
+	<key>File</key>
+	<string>Chapters/Chapter1.playgroundchapter/Pages/My Playground.playgroundpage/main.swift</string>
+</dict>
+</plist>
