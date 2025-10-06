@@ -57,3 +57,13 @@
 <img src="PHOTO&GIF/Swift-1-BenTen-Projects_App6.png" width="600"> <img src="PHOTO&GIF/Swift-2-BenTen-Projects_App6.png" width="600">
 
 <br>
+
+## [Swift Binary Converter 1](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift/My%20Playground.playgroundbook)
+
+<img src="PHOTO&GIF/Swift-1-Part2-Projects_Book1.png" width="600"> 
+
+<br>
+
+## [Swift Binary Converter 2](https://github.com/kaankoca-debug/kaankoca-debug.github.io/tree/main/Projects/Swift/My%20App%20copy%2010.swiftpm)
+
+<img src="PHOTO&GIF/Swift-1-Part3-Projects_App10.png" width="600">
