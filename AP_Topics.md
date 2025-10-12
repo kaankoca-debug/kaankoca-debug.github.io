@@ -249,3 +249,82 @@ Lossy - Size smaller, quality is slightly worse
 - Date of file
 - Name of file
 - Type of file
+ 
+<br>
+<br>
+
+## **Extracting Information From Data**
+In data science to extract information the user has to visualize and manipulate the data. 
+
+**Some examples of data extraction:**
+-Social Media Apps
+-Posts
+-Likes
+-Comments
+-Views
+
+**Some examples of data extraction:**
+-Online Stores
+-Items we searched
+-Items we viewed
+
+**Note:** The users of websites create data too. (Messaging a friend etc.)
+
+**Note:** Companies that store data are having hard times trying to give meaning to these data sets. They need to analyze them. 
+
+**Data:** Raw information from the computer.
+
+**Information:** Processed and analyzed data.
+
+Information is the organized and processed form of data. (Information is usable.)
+
+Prefix Meta:
+An underlying definition or description.
+
+      Metadata: 
+      - Data that describes data
+      - Describes whatever the data is connected to
+      - It helps classification
+      - Makes it easier to retrieve information
+      
+      Examples:
+      - Author of file
+      - Name of file
+      - Size of file
+      - Type of file
+      - Date of file
+      - Usage of file
+
+      Difference Between Data and Metadata:
+      - Data is content that reports observations
+      - Metadata describes relevant information about data
+
+**Data Cleaning, Data Analytics:**
+Unstructured data is hard to sort and manage. So people need to clean them up and structure them. There are 2 ways to structure data sets:
+
+Adding a storage format which kills the invalid data
+
+Using log files to group data that are easier to manipulate like grouping data that are from the same dates. 
+
+Note: Sometimes data sizes may exceed the range of what the computer can handle. To fix these overloads, the analysis needs to be done and the physical servers like CPU’s should be the needed amount. Also there should be a backup for most things. 
+
+<br>
+<br>
+
+## **Using Programs With Data**
+- The use of internet and digital devices increase which cause data to flood. So people have hard times finding the information they are looking for. But there is an easier way to find information. 
+
+      - Data Mining: The steps of finding data to turn them into usable information.
+   
+      - Finding the data from cloud platforms
+      - Storing the data in a database like repositories
+      - Preparing the data for analysis by deciding the tools for analysis
+      - Analyzing the data by using data visualization tools to understand patterns
+  
+      Often graphs are used to understand data:
+      - Picture graphs use pictures to represent values
+      - Bar graphs use horizontal and vertical lines to show values
+      - Line graphs represent values by using lines
+      - Scatterplots are like line graphs but they draw a best fit line as well
+      
+      
