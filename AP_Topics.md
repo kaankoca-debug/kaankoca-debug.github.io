@@ -43,7 +43,7 @@ Collaboration can happen in 3 steps of creating a program:
 A program is called to an instruction set that tells the computer how to complete a task. These programs exist because they help people do work faster and easily, they give information and create entertainment. 
 
 Every program has something in common. They all have something called a function. 
-- Function → What the function does
+- Function → What the program does
 - Purpose → Why the function is created
 **Example:** Calculators perform operations (making operations is the function).
 **Example:** This program helps people to solve problems (helping people solve problems is the purpose).
