@@ -2,7 +2,7 @@
 
 # GitHub Pages
 
-The reason I'm doing this project is because I wanted to learn how to create a website from GitHub in my CS Principles course. So, this is the first website I've made, and I'm doing this project to deepen my horizons. 
+Hello I am Kaan Koca a 10th grade high school student from Hisar Schools located in İstanbul Türkiye. I created this GitHub page for my education and learning on coding, documentation and website creation. I am taking the course AP Computer Science Principles. In this course I am learning to code, document, compress data, collab in teams, create education videos and many more. This page will be the place where I will store my learning in. I will code programs, I will document them, create videos that teach people how I coded it, write paragraphs for collabration, program function, design and debugging, will create videos for the paragraphs, compress images, write reflections about my tests and put them all in HERE. If you want to view my journey in 10th grade AP CSP you can look at these pages.
 
 ## Kaan Koca Hisar CS
 
