@@ -1086,3 +1086,256 @@
         }
     }
     }
+
+<br>
+
+## Swift Clock Game
+
+<img src="PHOTO&GIF/Swift-1-Clock Game-Documentary_App15.png" width="600">  <img src="PHOTO&GIF/Swift-2-Clock Game-Documentary_App15.png" width="600">  <img src="PHOTO&GIF/Swift-3-Clock Game-Documentary_App15.png" width="600">  <img src="PHOTO&GIF/Swift-4-Clock Game-Documentary_App15.png" width="600">  <img src="PHOTO&GIF/Swift-5-Clock Game-Documentary_App15.png" width="600">  <img src="PHOTO&GIF/Swift-6-Clock Game-Documentary_App15.png" width="600">
+
+    //6 October 2025
+    import SwiftUI
+
+    struct ContentView: View {
+    @State private var clockHour: Int = 12
+    @State private var clockMinute: Int = 0
+    //I created the variables for the hour and minutes of the clock
+    
+    var isMorning: Bool { clockHour < 12 }
+    //The variable to decide if the hour is am or pm
+    var hourRotation: Double { Double(clockHour % 12) * 30 + Double(clockMinute) * 0.5 }
+    //The variable of the hour angle of the hour hand
+    var minuteRotation: Double { Double(clockMinute) * 6 }
+    //The variable of the minute angle of the minute hand
+    
+    @State private var frogPosition: CGPoint = .zero
+    //This is the position of the player in the game
+    @State private var gameRunning = false
+    //The variable to see if the game is running or not
+    @State private var showMessage = ""
+    //The variable to easily put on messages when I want. Messages like you lost.
+    @State private var obstacles: [CGPoint] = []
+    //This is the variable for the locations of the obstacles.
+    
+    let obstacleTimer = Timer.publish(every: 0.03, on: .main, in: .common).autoconnect()
+    //This is basically a fast timer that is for 0.03 seconds.
+    
+    var body: some View {
+        GeometryReader { geo in
+            //The geo code is used to figure out the real size of the screen where the program will take place
+            let size = min(geo.size.width, geo.size.height)
+            let radius = size / 2
+            //I use the geo sizes to put the clock game in the size of the screen automatically.
+            
+            VStack(spacing: 10) {
+                // MARK: - Time Display
+                Text("Hour: \(clockHour % 12 == 0 ? 12 : clockHour % 12)  Minute: \(clockMinute)  \(isMorning ? "AM" : "PM")")
+                    .foregroundColor(.white)
+                    .bold()
+                    .padding(.top, 10)
+                //This is the text for the clock to show weather the time is am or pm.
+                
+                ZStack {
+                    // Background color
+                    (isMorning ? Color.yellow.opacity(0.5) : Color.indigo.opacity(0.5))
+                        .ignoresSafeArea()
+                    //This part is about the background. When the hour is am its yellow when its pm the background is indigo.
+                    //I used ignoresSafeArea to make sure all of the background is covered.
+                    
+                    // Clock face
+                    Circle()
+                        .fill(Color.white)
+                        .frame(width: size, height: size)
+                        .shadow(radius: 5)
+                    
+                    // Hour marks
+                    ForEach(0..<12) { i in
+                        Rectangle()
+                            .fill(Color.black)
+                            .frame(width: 2, height: 10)
+                            .offset(y: -radius + 15)
+                            .rotationEffect(.degrees(Double(i) * 30))
+                        //The big circle of the clock. I used the variable size for the frame because previosly I stated size as geometry reader which basically looks at the size of the screen. So the circle is going to change when the size of the screen changes.
+                        
+                        //I used the for each code to create the little lines of the hour numbers. The number goes from 0 to 12 because there are 12 numbers on the clock.
+                    }
+                    
+                    // Minute & hour hands
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.blue)
+                        .frame(width: 6, height: radius * 0.6)
+                        .offset(y: -radius*0.3)
+                        .rotationEffect(.degrees(minuteRotation))
+                    //This is the design of the minute hand of the clock.
+                    
+                    RoundedRectangle(cornerRadius: 20)
+                        .fill(Color.yellow)
+                        .frame(width: 8, height: radius * 0.5)
+                        .offset(y: -radius*0.25)
+                        .rotationEffect(.degrees(hourRotation))
+                    //This is the design of the hour hand of the clock.
+                    
+                    Circle()
+                        .fill(Color.blue)
+                        .frame(width: 12, height: 12)
+                    //Little circle on the center
+                    
+          
+                    ZStack {
+                        ForEach(obstacles.indices, id: \.self) { i in
+                            Rectangle()
+                                .fill(Color.red)
+                                .frame(width: 30, height: 30)
+                                .position(obstacles[i])
+                            //This is the little circle on the center of the clock that holds the minute and hour hands.
+                            
+                            //For each obstacles the computer choses a number in a list for example if there are 6 obstackles the list is: 0, 1, 2, 3, 4, 5.
+                                                                                            
+                            //The id: .self) makes sure the numbers are unique
+                            
+                            //I used i to pick obstacle numbers from the list and use them in the game.
+                            
+                           //This is the design of the obstacles
+                            
+                           //I used the .position(obstacle[i]) to update positions of obstacles.
+                        }
+                        
+                        // Frog
+                        Circle()
+                            .fill(Color.green)
+                            .frame(width: 30, height: 30)
+                            .position(frogPosition)
+                        //This is the design of the player of the game.
+                        //The position is where the mouse touches the screen.
+                    }
+                    .frame(width: size, height: size)
+                    //The game area is created
+                    .clipShape(Circle())
+                    //I used this code to cut the area to the circles size
+                    .contentShape(Circle())
+                    //An invisible circle boundry to disable the user from getting out of the watch.
+                    .gesture(
+                        DragGesture()
+                    //For the drag of the mouse
+                            .onChanged { value in
+                                //Runs again when the location of the mouse changes while dragging.
+                                let dx = value.location.x - radius
+                                let dy = value.location.y - radius
+                                let distance = sqrt(dx*dx + dy*dy)
+                                //These 3 lines calculate the distance of the user from the circle's center to make sure the user doesn't leave the circle.
+                                if distance < radius - 15 {
+                                    frogPosition = value.location
+                                    //If the mouse is inside the circle than the location of the user is the mouse's location.
+                                } else {
+                                    let angle = atan2(dy, dx)
+                                    frogPosition = CGPoint(
+                                        x: radius + (radius - 15) * cos(angle),
+                                        y: radius + (radius - 15) * sin(angle)
+                                        //If the mouse is outside of the circle than the location of the user is on the edge of the circle that is closest to the mouse.
+                                    )
+                                }
+                            }
+                    )
+                    
+                    // Overlay messages
+                    if !showMessage.isEmpty {
+                        Text(showMessage)
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.black.opacity(0.7))
+                            .cornerRadius(12)
+                        //This is the code that will be the design when a message is shown on the screen.
+                    }
+                }
+                
+                VStack(spacing: 8) {
+                    HStack(spacing: 20) {
+                        Button("- Hour") { clockHour = (clockHour - 1 + 24) % 24 }
+                        Button("+ Hour") { clockHour = (clockHour + 1) % 24 }
+                    }
+                    //The buttons to increase or decrease the hour by 1.
+                    HStack(spacing: 20) {
+                        Button("- Minute") { clockMinute = (clockMinute - 1 + 60) % 60 }
+                        Button("+ Minute") { clockMinute = (clockMinute + 1) % 60 }
+                    }
+                    //The buttons to increase or decrease the minute by 1.
+                }
+                .foregroundColor(.white)
+                .padding()
+                .background(Color.black.opacity(0.5))
+                .cornerRadius(12)
+                //These codes are for the designs of these buttons.
+            }
+            
+            .onAppear {
+                let start = CGPoint(x: radius, y: radius + radius*0.5)
+                frogPosition = start
+                resetObstacles(size: size)
+                gameRunning = true
+                //I place the user at the bottom part of the clock for starting and start the game by switching gamerun to true. Also the obstacles are put into random positions.
+            }
+            .onReceive(obstacleTimer) { _ in
+                guard gameRunning else { return }
+                
+                for i in obstacles.indices {
+                    obstacles[i].y += 3
+                    let dx = obstacles[i].x - radius
+                    let dy = obstacles[i].y - radius
+                    let distance = sqrt(dx*dx + dy*dy)
+                    if distance > radius - 15 {
+                        resetObstacle(index: i, size: size)
+                        //This code checks if the obstacles hit the user or get out of the circle. It uses the timer variable I created before. So it does this function every 0.03 seconds.
+                    }
+                }
+                
+                checkCollision(size: size)
+            }
+        }
+    }
+    
+    func resetObstacles(size: CGFloat) {
+        obstacles = []
+        let radius = size/2
+        for _ in 0..<6 { // more obstacles for challenge
+            let angle = Double.random(in: 0..<2*Double.pi)
+            let r = Double.random(in: 0..<Double(radius - 30))
+            obstacles.append(CGPoint(
+                x: radius + CGFloat(r * cos(angle)),
+                y: radius - CGFloat(r) - 30
+                //This code basically creates 6 obstacles in random points of the circles center.
+            ))
+        }
+    }
+    
+    func resetObstacle(index: Int, size: CGFloat) {
+        //resets single obstacle positions
+        let radius = size/2
+        let angle = Double.random(in: 0..<2*Double.pi)
+        let r = Double.random(in: 0..<Double(radius - 30))
+        obstacles[index] = CGPoint(
+            x: radius + CGFloat(r * cos(angle)),
+            y: radius - CGFloat(r) - 30
+        )
+    }
+    
+    func checkCollision(size: CGFloat) {
+        //checks if the user hit an obstacle
+        let frogFrame = CGRect(x: frogPosition.x - 15, y: frogPosition.y - 15, width: 30, height: 30)
+        for obs in obstacles {
+            let obsFrame = CGRect(x: obs.x - 15, y: obs.y - 15, width: 30, height: 30)
+            if frogFrame.intersects(obsFrame) {
+                let radius = size/2
+                frogPosition = CGPoint(x: radius, y: radius + radius*0.5)
+                showMessage = "💥 Hit!"
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                    showMessage = ""
+                    resetObstacles(size: size)
+                    //If the user does hit an obstacle than the message hit is displayed.
+                }
+                break
+            }
+        }
+    }
+    }
+
