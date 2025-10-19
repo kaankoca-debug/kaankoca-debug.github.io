@@ -936,3 +936,153 @@
     }
 
 
+<br>
+
+## Swift Ice Cream Overflow
+
+<img src="PHOTO&GIF/Swift-1-Ice Cream Overflow-Documentary_App13.png" width="600">  <img src="PHOTO&GIF/Swift-2-Ice Cream Overflow-Documentary_App13.png" width="600">  <img src="PHOTO&GIF/Swift-3-Ice Cream Overflow-Documentary_App13.png" width="600">  <img src="PHOTO&GIF/Swift-4-Ice Cream Overflow-Documentary_App13.png" width="600"> 
+
+    // 28 September 2025
+    import SwiftUI
+
+    func convertToBinary(_ number: Int) -> String {
+    if number == 0 { return "0" }
+    var num = number
+    var binary = ""
+    while num > 0 {
+        let remainder = num % 2
+        binary = String(remainder) + binary
+        num = num / 2
+    }
+    return binary
+    }
+    //This function repeatedly divides the number by 2 until the remainder is 1 or 0. 
+
+    func padded4Bit(_ number: Int) -> String {
+    let n = ((number % 16) + 16) % 16
+    let raw = convertToBinary(n)
+    return String(repeating: "0", count: max(0, 4 - raw.count)) + raw
+    //This part ensures the binary number is always 4 digits by padding with zeros.
+    }
+
+    struct ContentView: View {
+    @State private var studentID: Int = 0
+    @State private var showOverflow = false
+    private let bitValues = [8, 4, 2, 1]
+    
+    //Here I used the state code to create variables for the powers of 2. 
+    @State private var scoopCount: Int = 0
+    
+    var body: some View {
+        ZStack {
+            VStack(spacing: 0) {
+                //In here I drew the ice cream cone and the circles for each number in the scoopcount variable. I used the .offset(y: CGFloat(-index * 30)) code for the circles to be on each other on every overflow. 
+                ForEach(0..<scoopCount, id: \.self) { index in
+                    Circle()
+                        .frame(width: 100, height: 50)
+                        .foregroundColor(.yellow)
+                        .offset(y: CGFloat(-index * 30))
+                        .shadow(radius: 3)
+                }
+                Image(systemName: "cone.fill")
+                    .font(.system(size: 200))
+                    .rotationEffect(.degrees(180))
+                    .foregroundColor(.blue)
+            }
+        }
+        //In here I created the design for the binary conversions. 
+        VStack(spacing: 20) {
+            Text("4-bit Student Code")
+                .font(.system(size: 28, weight: .bold))
+                .foregroundColor(.purple)
+            //The title text
+            
+            Text("Decimal: \(studentID)")
+                .font(.title2)
+                .foregroundColor(.gray)
+            //The decimal text
+            
+            Text("Binary: \(padded4Bit(studentID))")
+                .font(.title3).monospaced()
+            //The binary text
+            
+            HStack(spacing: 12) {
+                ForEach(bitValues, id: \.self) { value in
+                    let isActive = (studentID & value) == value
+                    RoundedRectangle(cornerRadius: 12)
+                        .fill(isActive ? Color.blue : Color.gray.opacity(0.3))
+                        .frame(width: 50, height: 60)
+                        .overlay(
+                            VStack(spacing: 4) {
+                                Text(isActive ? "1" : "0")
+                                    .font(.headline).monospaced()
+                                    .foregroundColor(isActive ? .white : .black)
+                                Text("\(value)")
+                                    .font(.caption).foregroundColor(.black.opacity(0.6))
+                                //In here I created the gray rectangles where the 1's and the 0's will take place. I also wrote the equilivients of the powers of 2. Like 1,2,4,8. 
+                            }
+                        )
+                }
+            }
+            
+            if showOverflow {
+                Text("OVERFLOW!")
+                    .font(.title2).bold()
+                    .foregroundColor(.red)
+                //This is the code for the OVERFLOW text. 
+            }
+            
+            HStack(spacing: 12) {
+                Button(action: {
+                    let wasMax = (studentID == 15)
+                    studentID = (studentID + 1) & 0xF
+                    if wasMax {
+                        showOverflow = true
+                        scoopCount += 1
+                        //This is the increment button which adds the decimal 1
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                            showOverflow = false
+                        }
+                    }
+                }) {
+                    Text("Increment (+1)")
+                        .padding(8)
+                        .background(Color.blue.opacity(0.7))
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                    //This is the design of the plus 1 button
+                }
+                
+                Button(action: {
+                    studentID = 0
+                    showOverflow = false
+                    scoopCount = 0
+                //This is the function of the reset button which just makes everything zero and false      
+                
+                }) {
+                    Text("Reset")
+                        .padding(8)
+                        .background(Color.gray.opacity(0.5))
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                    //The design of the reset button. 
+                }
+            }
+            
+            HStack(spacing: 8) {
+                ForEach([2,5,10,14], id: \.self) { preset in
+                    Button(action: { studentID = preset }) {
+                        //The functions of the set buttons. They are basically preset actions that write the equilivent binary codes for 2, 5, 10, 14
+                        Text("Set \(preset)")
+                            .padding(6)
+                            .background(Color.purple.opacity(0.7))
+                            .foregroundColor(.white)
+                            .cornerRadius(6)
+                        //The designs of the set buttons. 
+                    }
+                }
+            }
+        }
+    }
+    }
