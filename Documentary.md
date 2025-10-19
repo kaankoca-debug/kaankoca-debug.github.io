@@ -1,6 +1,6 @@
 **[Home](README.md)** | **[Projects](Projects.md)** | **[Resources](Resources.md)** | **[Documentation](Documentary.md)** | **[Big Ideas](Big_Ideas.md)** | **[Data Compression](Data_Compression.md)** | **[Quiz Documentation](Quiz_Documentation.md)** | **[AP Topics](AP_Topics.md)**
 
-# **[Documentataion](Documentary.md)**
+# **[Documentation](Documentary.md)**
 
 <br>
 
