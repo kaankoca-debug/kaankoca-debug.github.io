@@ -172,3 +172,18 @@ The design and development was pretty straightforward. I was given a mission to 
 
 **Identifying and Correcting Errors:**
 Like I said, the main challenge I encountered was the functions. There was a problem with the big OVERFLOW text. At first the function didn’t work at all. I looked at my previous projects to solve the problem and it worked. 
+
+<br>
+
+## [Ice Cream Overflow:]()
+**Collaboration:**
+I worked completely alone in this project. I had an idea to use my earlier codes on the binary converter and add a basic ice cream to it. After my thought about this idea I quickyl started on the code and after a long time I finished the code alone. 
+
+**Program Function and Purpose:**
+This program is basically the same with the binary converter. I just added an ice cream cone and when the binary numbers overflow the ice cream gets added a scoop of ice cream. I used for each code to create the scoops. So its an ice cream that gets added a scoop after an overflow in the binary numbers. 
+
+**Program Design and Development:**
+I didn't work on the design a lot. I just put a cone from the libary of playground changed its size and added circles for the scoops. It doesn't rook a lot realistic but the function works correctly. The desing on the lower part is the same as my previous project on binary code converting. 
+
+**Identifying and Correcting Errors:**
+While working on the code I really had a hard time on the for each part because I had only used it once before and didn't understand what it really did. After solving this error I didn'T have any major problems and finished the code correctly. 
