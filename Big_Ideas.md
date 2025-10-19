@@ -175,7 +175,7 @@ Like I said, the main challenge I encountered was the functions. There was a pro
 
 <br>
 
-## [Ice Cream Overflow:]()
+## [Swift Ice Cream Overflow:]()
 **Collaboration:**
 I worked completely alone in this project. I had an idea to use my earlier codes on the binary converter and add a basic ice cream to it. After my thought about this idea I quickyl started on the code and after a long time I finished the code alone. 
 
@@ -187,3 +187,18 @@ I didn't work on the design a lot. I just put a cone from the libary of playgrou
 
 **Identifying and Correcting Errors:**
 While working on the code I really had a hard time on the for each part because I had only used it once before and didn't understand what it really did. After solving this error I didn'T have any major problems and finished the code correctly. 
+
+
+## [Swift Clock Game:]()
+**Collaboration:**
+In this project I normally had to work with my partner on the other clock projects but I worked alone in this project. I think it was a really long project so working with a partner would be better and easier. But I managed to do it in a longer amount of time. 
+
+**Program Function and Purpose:**
+The program's function is the same as my previous watch projects there are buttons for changing the hour and the minute. The am/pm is shown, the time is shown. But in this project I made a game in the watch screen were some blocks fall from the sky and the user tries to get away from them. 
+
+**Program Design and Development:**
+The program design and development was really really hard and long to be honest. Because I used the geo reader, drag gesture and for each. I used geo reader and for each for the second time but they were still hard to code. I used draggesture for the first time but it wasn't so hard because it worked a lot like tap gesture. 
+
+**Identifying and Correcting Errors:**
+I had problems with the geo reader, drag gesture and for each codes. I tested many many times for these mistakes to be corrected. I also looked at my previous work for the for each and geo reader codes. After a long long time of debugging and testing everything went smoothly. 
+
