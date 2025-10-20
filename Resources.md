@@ -26,6 +26,11 @@
 
 ## [Data Compression Examples](https://drive.google.com/file/d/1utawaCcGORcyMXyUgyt_kRNo_883DSmn/view?usp=sharing)
 
-## [Decimal and Binary Conversion 1 Tutorial](https://drive.google.com/file/d/1pGUb_wmiJspuOs9TtEPfl3-DV1mxV5P8/view?usp=sharing)
+## [Swift Decimal and Binary Conversion 1 Tutorial](https://drive.google.com/file/d/1pGUb_wmiJspuOs9TtEPfl3-DV1mxV5P8/view?usp=sharing)
 
-## [Decimal and Binary Conversion 2 Tutorial](https://drive.google.com/file/d/17c-LS2cdMayDJLTD0a7hjF7AG63otBMI/view?usp=sharing)
+## [Swift Decimal and Binary Conversion 2 Tutorial](https://drive.google.com/file/d/17c-LS2cdMayDJLTD0a7hjF7AG63otBMI/view?usp=sharing)
+
+## [Swift Ice Cream Overflow Tutorial](https://drive.google.com/file/d/1weIIxql36smGQlay--EuuzZa35j-lbPV/view?usp=sharing)
+
+## [Swift Clock Game Tutorial](https://drive.google.com/file/d/13K7hrXaQa8BKbE7oOgMzItOk94UAQXjw/view?usp=sharing)
+
