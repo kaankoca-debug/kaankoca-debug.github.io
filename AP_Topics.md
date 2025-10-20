@@ -164,7 +164,7 @@ print(x)
 <br>
 
 # **Unit 2: Data**
-[Unit 2 Tutorial Video]()
+[Unit 2 Tutorial Video](https://drive.google.com/file/d/1uqg6Bfj1CiPNuqszWxRTWmwcz8Nxgp7a/view?usp=sharing)
 
 ## **Binary Numbers**
 - A bit is the smallest unit of information a computer can store. It can either be 1 or 0. These digits mean true/false, yes/no, off/on etc. However bits are also the biggest units of information a computer can manipulate. 
