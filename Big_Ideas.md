@@ -23,48 +23,48 @@ As I refined the program, I also encountered issues with the **background failin
 ## [Swift Tic Tac Toe:]()
 
 **Collaboration:**
-I completed this project individually with no collaboration. Collaboration has lots of points of views and ideas, but individually this project developed my skills of work and making oneself familiar with Swift coding. It helped me to focus on learning how I should organize visual output of a program.
+I completed this project **individually** with no collaboration. Collaboration has lots of points of views and ideas, but individually this project **developed my skills of work** and making myself familiar with Swift coding. It helped me to focus on learning how I should organize visual output of a program.
 
 **Program Function and Purpose:**
-The program's job is simply to print out a simple tic-tac-toe board. It draws nine squares with some of them filled with Os and Xs, but it can't actually be played or used. Its purpose is purely visual.
+The program's job is **simply to print out a simple tic-tac-toe board**. It draws **nine squares** with some of them filled with **Os and Xs**, but it can't actually be played or used. Its **purpose is purely visual**.
 
 **Program Design and Development:**
-I created the board with code defining nine squares of a grid. Then I added a few X’s and O’s to show possible moves. With no gameplay or logic involved, the creation involved mostly positioning and looks. It went smoothly and confirmed my knowledge with Swift.
+I **created the board** with code defining nine squares of a grid. Then I added a few X’s and O’s to show possible moves. With **no gameplay or logic** involved, the creation involved mostly positioning and looks. It went smoothly and confirmed my knowledge with Swift.
 
 **Identifying and Correcting Errors:**
-I didn't make any mistakes while creating this program. It wasn't hard to get correct the first time because I only needed to do some plotting on the grid and positioning the symbols. But I still checked that the X’s and O’s were where I wanted them to be.
+I **didn't make any mistakes** while creating this program. It wasn't hard to get correct the first time because I only needed to do some plotting on the grid and positioning the symbols. But I **still checked** that the X’s and O’s were where I wanted them to be.
 
 <br>
 
 ## [Swift Favorites:]()
 
 **Collaboration:**
-I also worked independently and did not collaborate with anyone. By working independently, I could concentrate on my ideas. I don’t think this program was hard. It took less than 5 minutes and it was just practice for my Swift coding. 
+I also worked **independently** and did not collaborate with anyone. By working independently, I could **concentrate on my ideas**. I don’t think this program was hard. It took less than 5 minutes and it was just practice for my Swift coding. 
 
 **Program Function and Purpose:**
-The program just shows the texts I wrote to the code. So it is the very basics of Swift actually. I put 3 sentence starters and put my favorite emoji, number and color. So its function is to show to the screen what I wrote. 
+The program just **shows the texts I wrote to the code**. So it is the very basics of Swift actually. I put 3 sentence starters and **put my favorite emoji, number and color**. So its function is to show to the screen what I wrote. 
 
 **Program Design and Development:**
-I created the program through typing out my sentences and putting my favorite number, color and emoji. I purposely went about making the writing legible. The process was  very easy and clear. I liked watching the program run correctly. 
+I created the program through **typing out my sentences and putting my favorite number, color and emoji**. I purposely went about making the writing legible. The process was  very easy and clear. I liked watching the program run correctly. 
 
 **Identifying and Correcting Errors:**
-This was a program that is about the basics of Swift Playground. So I didn’t encounter any problems because it was really easy to code. There was a text written by me and being printed onto the screen. 
+This was a program that is about the basics of Swift Playground. So I **didn’t encounter any problems** because it was really easy to code. There was a text written by me and being printed onto the screen. 
 
 <br>
 
 ## [Swift Ice Cream Shop:]()
 
 **Collaboration:**
-This project was one of the projects I worked on alone. Working by myself has its positive and negative parts. I don’t have to communicate with someone but I also don’t have a partner to help me in the parts I can’t manage on my own. But after finishing the project I felt very confident in Swift. 
+This project was one of the projects I worked on **alone**. Working by myself has its positive and negative parts. I **don’t have to communicate** with someone but I also don’t have a partner to help me in the parts I can’t manage on my own. But after finishing the project I felt very confident in Swift. 
 
 **Program Function and Purpose:**
-The program is actually like a mini calculator. You enter the price of a cone and the number of cones and it gives you the total price. But you need to enter the numbers into the code not into the program because there isn’t a place to get input. 
+The program is actually like a **mini calculator**. You **enter the price of a cone and the number of cones** and it **gives** you the **total price**. But you need to enter the numbers into the code not into the program because there isn’t a place to get input. 
 
 **Program Design and Development:**
-It is just a simple multiplication program. The only difference is that there is a context about an ice cream shop and the user has to enter the numbers into the code, not into the program. The math wasn’t hard so it was an easy development.
+It is just a **simple multiplication** program. The only difference is that there is a context about an ice cream shop and the user has to enter the numbers into the code, not into the program. The math wasn’t hard so it was an **easy development**.
 
 **Identifying and Correcting Errors:**
-I did not have any errors. The calculations were tricky at first because I needed to use this symbol “ * ” for multiplication while coding. Testing the program helped me confirm that the numbers and calculations worked as expected at the end. 
+I did **not have any errors**. The calculations were tricky at first because I needed to use this symbol “ * ” for multiplication while coding. **Testing** the program **helped** me confirm that the numbers and calculations worked as expected at the end. 
 
 <br>
 
