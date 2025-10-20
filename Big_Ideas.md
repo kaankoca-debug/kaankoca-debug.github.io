@@ -7,16 +7,16 @@
 ## [Scratch Tic Tac Toe:]()
 
 **Collaboration:**
-I made this project individually, with no collaboration. Even though collaboration presents a diversity of perspectives, the project helped me to focus on developing my skills of coding. With individual work, I felt confident of delivering a complete game from a blank page. But I also felt a little stressed because I didn’t have any coding background.
+I made this project **individually**, with no collaboration. Even though collaboration presents a **diversity of perspectives**, the project helped me to focus on developing my skills of coding. With individual work, I felt confident of delivering a complete game from a blank page. But I also felt a little stressed because I didn’t have any coding background.
 
 **Program Function and Purpose:**
-The program is a simple game of tic-tac-toe with O’s and X’s. Two sides mark spaces, and with a win, the background changes to a winning page. It aims to allow individuals to enjoy a simple and old game through my program.
+The program is a **simple game of tic-tac-toe** with O’s and X’s. Two sides mark spaces, and with a win, the background changes to a winning page. It aims to allow individuals to enjoy a simple and old game through my program.
 
 **Program Design and Development:**
-I started with nine rectangles for the grid and made my own X’s and O’s with a backdrop of Scratch. As it was my first real code project, I tested the program over and over again after every change I made. Over time, I created the layout and made sure the program was working smoothly.
+I started with **nine rectangles** for the grid and **made my own X’s and O’s** with a backdrop of Scratch. As it was my first real code project, I tested the program over and over again after every change I made. Over time, I created the layout and made sure the program was working smoothly.
 
 **Identifying and Correcting Errors:**
-As I refined the program, I also encountered issues with the background failing to shift correctly and sometimes the X appearing during O's input. With testing over and over again, I corrected both of these problems of logic and improved the use of the program.
+As I refined the program, I also encountered issues with the **background failing to shift correctly** and sometimes the **X appearing during O's input**. With testing over and over again, I corrected both of these problems of logic and improved the use of the program.
 
 <br>
 
