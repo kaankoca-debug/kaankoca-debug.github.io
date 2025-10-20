@@ -71,77 +71,77 @@ I did **not have any errors**. The calculations were tricky at first because I n
 ## [Swift Burger Cafe:]()
 
 **Collaboration:**
-I worked on this project by myself and did not collaborate with anyone again. Doing it alone helped me focus better. I practiced writing code that calculates totals for different items. This project helped me feel more confident making a program including processes, on my own.
+I worked on this project **by myself** and did not collaborate with anyone again. Doing it alone helped me **focus better**. I practiced writing code that calculates totals for different items. This project helped me **feel more confident** making a program including processes, on my own.
 
 **Program Function and Purpose:**
-The program calculates the total price for drinks, potatoes, and hamburgers. The number of each item and their prices are written in the code. Its purpose is to show how code can do math and display a summary of an order clearly.
+The program **calculates the total price for drinks, potatoes, and hamburgers**. The number of each item and their prices are written in the code. Its purpose is to show how code can do math and **display a summary** of an order clearly.
 
 **Program Design and Development:**
-I made the program by giving some price values for drinks, potatoes, and hamburgers in the code. I calculated the total price and printed all the details onto the screen. The math was a little tricky because of the symbols, but it helped me practice using numbers and variables in a program.
+I made the program by **giving some price values for drinks, potatoes, and hamburgers** in the code. I **calculated the total price** and **printed all** the details onto the screen. The math was a little tricky because of the symbols, but it helped me practice using numbers and variables in a program.
 
 **Identifying and Correcting Errors:**
-I didn’t have any errors. The calculations were a bit tricky because of some symbols being different in code, but I checked the math and output to make sure the totals were correct. Testing the program confirmed that all numbers and calculations worked correctly.
+I **didn’t have any errors**. The calculations were a bit tricky because of some symbols being different in code, but I checked the math and output to make sure the totals were correct. **Testing** the program **confirmed** that all numbers and calculations **worked correctly**.
 
 <br>
 
 ## [Swift Calculator:]()
 
 **Collaboration:**
-I created this program with a friend. We both wrote the code but I focused on the number calculations while she helped with organizing parts of the program. Working together made it easier and quicker to finish the project. We also improved on teamwork. 
+I created this program **with a friend**. We **both wrote the code** but **I focused on** the number **calculations** while **she** helped with **organizing parts of the program**. Working together made it **easier and quicker to finish the project**. We also improved on teamwork. 
 
 **Program Function and Purpose:**
-The program is just a simple calculator that gets two numbers from the user and makes the process from the button pressed. There are buttons to add, subtract, multiply, or divide. When a button of these processes is pressed, the result appears on the bottom of the screen. It aims to let users do simple calculations quickly.
+The program is just a **simple calculator** that **gets two numbers from the user** and **makes** the **process from the buttons pressed**. There are **buttons to add, subtract, multiply, or divide**. When a button of these processes is pressed, the result appears on the bottom of the screen. It aims to let users do simple calculations quickly.
 
 **Program Design and Development:**
-I made 2 textboxes for 2 numbers and made 4 buttons for each operation. The hardest part was putting the text boxes in the right place. We both worked on the code, and the math operations. So the result was correct.
+I made **2 textboxes for 2 numbers** and made **4 buttons for each operation**. The **hardest part** was putting the **text boxes** in the right place. We both worked on the code, and the math operations. So the result was correct.
 
 **Identifying and Correcting Errors:**
-We had some trouble placing the input boxes correctly. After testing, we fixed the layout and checked the math. Once everything was in the right place, the calculator worked and gave correct results for all four operations.
+We had some **trouble placing the input boxes correctly**. After **testing, we fixed the layout** and checked the math. Once everything was in the right place, the calculator worked and gave correct results for all four operations.
 
 <br>
 
 ## [Swift Profile:]()
 **Collaboration:**
-I did this project with a partner but we both did our own profiles and asked questions when we got stuck at a part. It was pretty easy, just drawing an image. With this project I learned to work with a partner on two separate projects.
+I did this project **with a partner** but **we both did our own profiles** and asked questions when we got stuck at a part. It was pretty easy, just drawing an image. With this project I learned to **work with a partner on two separate projects**.
 
 **Program Function and Purpose:**
-I used Swift Playground to draw my profile with codes. I used basic codes for shapes like rounded rectangles, circles, ellipses and normal rectangles. I used an image from the library for the first time which was interesting. 
+I used Swift Playground to draw my profile with codes. I used **basic codes for shapes like rounded rectangles, circles, ellipses and normal rectangles**. I used an **image from the library** for the first time which was interesting. 
 
 **Program Design and Development:**
-I created my program by arranging the shapes I drew on the screen to create my profile correctly. I put the shapes into different locations and positions. The project was not hard and it helped me practice using Swift’s shape codes. 
+I created my program by **arranging the shapes** I drew on the screen to create my profile correctly. I put the shapes into different locations and positions. The **project was not hard** and it helped me practice using Swift’s shape codes. 
 
 **Identifying and Correcting Errors:**
-I did not have any major errors. I checked the placement of shapes to make sure the drawing looked correct. Testing helped me confirm that all shapes appeared where I wanted, and the final picture showed my self profile accurately.
+I **did not have any major errors**. I **checked the placement of shapes** to make sure the drawing looked correct. Testing helped me confirm that all shapes appeared where I wanted, and the final picture showed my self profile accurately.
 
 <br>
 
 ## [Swift Clock:]()
 **Collaboration:**
-We worked on this project with a total of 4 people. We didn’t know anything about creating a clock from coding so we all worked together on the same thing. We all tried to make the program and everyone had a different idea which was a bit frustrating. Working with a group made things really quicker and helped all of us to understand the topic very well. 
+We worked on this project with a **total of 4 people**. We didn’t know anything about creating a clock from coding so we **all worked together on the same thing**. We all tried to make the program and everyone had a **different idea** which was a **bit frustrating**. Working with a **group made things really quicker** and helped all of us to understand the topic very well. 
 
 **Program Function and Purpose:**
-This program is a very simple clock application. When the screen is tapped by the user, the minute changes by +1, and the hour changes after 60 minutes. There are four buttons in total: -hour, +hour, -minute, +minute, which helps the user create the time he/she wants to see. 
+This program is a very **simple clock application**. When the **screen is tapped** by the user, the **minute** changes by **+1**, and the **hour changes after 60 minutes**. There are four **buttons** in total: **-hour, +hour, -minute, +minute**, which helps the user create the time he/she wants to see. 
 
 **Program Design and Development:**
-I worked on the clock’s basic functions with a friend. We used variables to track the time and calculated degrees for the hands. The degrees and variables were tricky, but we organized the steps carefully. The other friends added buttons for changing hours and minutes.
+I worked on the clock’s basic functions with a friend. We **used variables to track the time and calculated degrees for the hands**. The degrees and variables were tricky, but we **organized the steps carefully**. The other friends added buttons for changing hours and minutes.
 
 **Identifying and Correcting Errors:**
-The variables and degree calculations were challenging at first. We tested the program to make sure the hands moved correctly and the buttons updated the time as expected. After checking and adjusting, the clock worked properly and all functions displayed the correct time.
+The **variables and degree calculations were challenging** at first. We **tested the program to make sure the hands moved correctly** and the **buttons updated the time as expected**. After checking and adjusting, the clock worked properly and all functions displayed the correct time.
 
 <br>
 
 ## [Swift Ben-Ten Watch:]()
 **Collaboration:**
-I worked on this project with a partner. I focused on the Ben 10 style and the style change, while my friend created the gear style. Working together let us combine our skills to make the watch interactive to the user and visually interesting.
+I worked on this project **with a partner**. **I** focused on the **Ben 10 style and the style change**, while **my friend** created the **gear style**. Working together let us **combine our skills** to make the watch interactive to the user and visually interesting.
 
 **Program Function and Purpose:**
-The program is a watch that shows the time with AM/PM at the bottom. When the screen is tapped, the watch switches between the Ben 10 style and the gear style. The purpose of the program is to interest the user by adding cool visuals and a great transition between the watch styles. 
+The program is a **watch that shows the time with AM/PM** at the bottom. When the **screen is tapped  the minute increases by 1**, when a **button is pressed the watch switches** between the **Ben 10** style and the **gear style**. The purpose of the program is to interest the user by adding cool visuals and a great transition between the watch styles. 
 
 **Program Design and Development:**
-I designed the Ben 10 style and added the tap logic to the button at the top right. My friend created the gear style with rotating gears and a new background. Managing the style change was actually very difficult, because it was our idea to do it with my friend but we had no idea of what to do. 
+I **designed the Ben 10 style** and **added the tap logic to a button** at the top right. My friend created the **gear style** with **rotating gears** and a new background. Managing the **style change** was actually very **difficult**, because it was our idea to do it with my friend but we had no idea of what to do. 
 
 **Identifying and Correcting Errors:**
-Changing the watch style was tricky and needed lots and lots of testing. We checked the tap correctly, switched styles and that the time remained visible. After many adjustments, the watch worked perfectly, and both the Ben 10 and gear styles got shown correctly.
+**Changing the watch style was tricky** and needed lots and lots of testing. We **checked the tap correctly**, switched styles and that the time remained visible. After many adjustments, the watch worked perfectly, and both the Ben 10 and gear styles got shown correctly.
 
 <br>
 
