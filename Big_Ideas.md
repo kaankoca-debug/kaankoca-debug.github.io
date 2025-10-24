@@ -147,58 +147,57 @@ I **designed the Ben 10 style** and **added the tap logic to a button** at the t
 
 ## [Swift Binary Conversion Part 2:]()
 **Collaboration:**
-I made this project by myself. I did the code, design and the testing. This individual project gave me the chance to focus more on the program to work correctly. Being alone helped me to think more about my own ideas, not brainstorming about many ideas. 
+I made this project by **myself**. I did the code, design and the testing. This individual project gave me the **chance to focus more on the program** to work correctly. Being alone helped me to think more about my own ideas, not brainstorming about many ideas. 
 
 **Program Function and Purpose:**
-The program has a very basic and simple function. It just automatically prints out the results of the decimals between 0 and 15 as binary codes. So it is a great and simple way to show all the four digit binary codes. 
+The program has a very basic and simple function. It just automatically **prints out the results of the decimals between 0 and 15 as binary codes**. So it is a great and simple way to show all the four digit binary codes. 
 
 **Program Design and Development:**
-I wrote the code in Swift Playgrounds Books. The design is pretty simple and basic because there isn’t anything extra than printing the binary codes. So even though it isn’t very fancy it clearly shows the answers and that was the main goal. 
+I wrote the code in **Swift Playgrounds Books**. The design is pretty simple and basic because there isn’t anything extra than printing the binary codes. So even though it isn’t very fancy it **clearly shows the answers** and that was the main goal. 
 
 **Identifying and Correcting Errors:**
-At the start of the project I wasn’t perfect on converting decimals to binary codes or binary codes to decimals. So I had a small problem with the calculations but I immediately solved them and everything went smoothly. 
+At the start of the project I wasn’t perfect on converting decimals to binary codes or binary codes to decimals. So I had a **small problem with the calculations** but I immediately solved them and everything went smoothly. 
 
 <br>
 
 ## [Swift Binary Conversion Part 3:]()
 **Collaboration:**
-Again I worked on this project alone, by myself. I focused on the button idea and started on the design. After doing this design I learned many parts of new codes that I didn’t know or understand before. So it was a good project that opened my mind. 
+Again I worked on this project **alone**, by myself. I focused on the button idea and started on the design. After doing this design I **learned many parts of new codes** that I didn’t know or understand before. So it was a good project that opened my mind. 
 
 **Program Function and Purpose:**
-The program is a conversion app that takes decimals and turns them into 4-bit binary codes. The codes are put into gray boxes and there are buttons where users can change or set the binary code or the decimal. 
+The program is a **conversion app** that takes **decimals and turns them into 4-bit binary** codes. The codes are put into gray boxes and there are buttons where users can change or set the binary code or the decimal. 
 
 **Program Design and Development:**
-The design and development was pretty straightforward. I was given a mission to complete and I got working on it. Before this project I always had hard times creating functions in codes. So I made mistakes in the OVERFLOW text. But after solving it the project was working correctly. 
+The design and development was pretty straightforward. I was given a mission to complete and I got working on it. Before this project I always had **hard** times **creating functions** in codes. So I made **mistakes in the OVERFLOW** text. But after solving it the project was working correctly. 
 
 **Identifying and Correcting Errors:**
-Like I said, the main challenge I encountered was the functions. There was a problem with the big OVERFLOW text. At first the function didn’t work at all. I looked at my previous projects to solve the problem and it worked. 
+Like I said, the main challenge I encountered was the **functions**. There was a problem with the big **OVERFLOW** text. At first the function didn’t work at all. I looked at my previous projects to solve the problem and it worked. 
 
 <br>
 
 ## [Swift Ice Cream Overflow:]()
 **Collaboration:**
-I worked completely alone in this project. I had an idea to use my earlier codes on the binary converter and add a basic ice cream to it. After my thought about this idea I quickyl started on the code and after a long time I finished the code alone. 
+I worked completely **alone** in this project. I had an idea to use my **earlier codes** on the binary converter and add a **basic ice cream** to it. After my thought about this idea I quickly started on the code and after a long time I finished the code alone. 
 
 **Program Function and Purpose:**
-This program is basically the same with the binary converter. I just added an ice cream cone and when the binary numbers overflow the ice cream gets added a scoop of ice cream. I used for each code to create the scoops. So its an ice cream that gets added a scoop after an overflow in the binary numbers. 
+This program is basically the **same with the binary converter**. I just **added an ice cream cone** and **when** the binary numbers **overflow** the ice cream gets **added a scoop** of ice cream. I used for each code to create the scoops. So its an ice cream that gets added a scoop after an overflow in the binary numbers. 
 
 **Program Design and Development:**
-I didn't work on the design a lot. I just put a cone from the libary of playground changed its size and added circles for the scoops. It doesn't rook a lot realistic but the function works correctly. The desing on the lower part is the same as my previous project on binary code converting. 
+I **didn't work on the design** a lot. I just put a **cone from the libary** of playground changed its size and added circles for the scoops. It doesn't rook a lot realistic but the function works correctly. The desing on the lower part is the same as my previous project on binary code converting. 
 
 **Identifying and Correcting Errors:**
-While working on the code I really had a hard time on the for each part because I had only used it once before and didn't understand what it really did. After solving this error I didn'T have any major problems and finished the code correctly. 
+While working on the code I **really had a hard time on the for each part** because I had only used it once before and didn't understand what it really did. After solving this error I didn't have any major problems and finished the code correctly. 
 
 
 ## [Swift Clock Game:]()
 **Collaboration:**
-In this project I normally had to work with my partner on the other clock projects but I worked alone in this project. I think it was a really long project so working with a partner would be better and easier. But I managed to do it in a longer amount of time. 
+In this project I **normally had to work with my partner on the other clock projects but I worked alone in this project**. I think it was a really long project so working with a partner would be better and easier. But I managed to do it in a longer amount of time. 
 
 **Program Function and Purpose:**
-The program's function is the same as my previous watch projects there are buttons for changing the hour and the minute. The am/pm is shown, the time is shown. But in this project I made a game in the watch screen were some blocks fall from the sky and the user tries to get away from them. 
+The program's function is the **same as my previous watch projects** there are **buttons for changing the hour and the minute**. The **am/pm** is shown, the **time** is shown. But in this project I made a **game in the watch screen** were some blocks fall from the sky and the user tries to get away from them. 
 
 **Program Design and Development:**
-The program design and development was really really hard and long to be honest. Because I used the geo reader, drag gesture and for each. I used geo reader and for each for the second time but they were still hard to code. I used draggesture for the first time but it wasn't so hard because it worked a lot like tap gesture. 
+The program design and development was **really really hard and long** to be honest. Because I used the **geo reader**, **drag gesture** and **for each**. I used geo reader and for each for the second time but they were still **hard to code**. I used draggesture for the first time but it wasn't so hard because it worked a lot like tap gesture. 
 
 **Identifying and Correcting Errors:**
-I had problems with the geo reader, drag gesture and for each codes. I tested many many times for these mistakes to be corrected. I also looked at my previous work for the for each and geo reader codes. After a long long time of debugging and testing everything went smoothly. 
-
+I had **problems with the geo reader, drag gesture and for each** codes. I **tested** many many times for these mistakes to be corrected. I also **looked at my previous work** for the for each and geo reader codes. After a long long time of **debugging and testing** everything went smoothly. 
