@@ -201,3 +201,16 @@ The program design and development was **really really hard and long** to be hon
 
 **Identifying and Correcting Errors:**
 I had **problems with the geo reader, drag gesture and for each** codes. I **tested** many many times for these mistakes to be corrected. I also **looked at my previous work** for the for each and geo reader codes. After a long long time of **debugging and testing** everything went smoothly. 
+
+## [Swift Candy Shop Simulator:]()
+**Collaboration:**
+I worked on this project **alone**. I didn’t have other people to give any other ideas which helped me **focus on my ideas** and practice Swift coding. 
+
+**Program Function and Purpose:**
+The program includes **4 types of candies**: Gummy, lollipop, chocolate, caramel. These candies are **sold on specific minutes** and I created functions to show the **bestseller, the stock, the money, the low stocks and write every minute and what is sold** in it. 
+
+**Program Design and Development:**
+I used **functions and loops**. I made **3 functions** for finding the **bestseller**, the **total stock** and deciding if **stocks are low**. Then I made another function to use these 3 functions and just **run the entire program**.
+
+**Identifying and Correcting Errors:**
+I really struggled writing the **functions and variables** in the **correct places**. After solving that I had problems with for loops but I quickly learned my mistake and finished the program. 
