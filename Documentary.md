@@ -1338,4 +1338,147 @@
         }
     }
     }
+    
+<br>
+
+## Swift Candy Shop Simulator
+
+<img src="PHOTO&GIF/Swift-1-Candy-Documentary_App19.png" width="600">  <img src="PHOTO&GIF/Swift-2-Candy-Documentary_App19.png" width="600">  <img src="PHOTO&GIF/Swift-3-Candy-Documentary_App19.png" width="600">  <img src="PHOTO&GIF/Swift-4-Candy-Documentary_App19.png" width="600">
+
+    //12/11/2025
+    import SwiftUI
+
+    struct ContentView: View {
+    @State var chocoStock = 10
+    @State var gumStock = 10
+    @State var lolStock = 10
+    @State var caraStock = 10
+    //I create the variables for the stocks of all the candies. 
+    
+    let chocoPrice = 5
+    let gumPrice = 3
+    let lolPrice = 4
+    let caraPrice = 6
+    //I enter their prices.
+    
+    @State var soldChoco = 0
+    @State var soldGum = 0
+    @State var soldLol = 0
+    @State var soldCara = 0
+    @State var cash = 0
+    //The amounts of candies sold
+    
+    //This is the function to basically just add up every stock and find the total stock. 
+    func totalstock(){
+        let totalStock = chocoStock + gumStock + lolStock + caraStock
+        print(totalStock)
+        if totalStock < 10{
+            print("Restock is needed!")
+        //If the total stock is less than 10 than the restock needed message appears. 
+        }
+    }
+
+    //This is the function to find the bestseller candy and print it out. 
+    func bestseller(){
+        var max = soldChoco
+        var best = "Chocolate"
+        //I declare the bestseller as chocolate.
+        
+        if soldGum > max{
+            max = soldGum
+            best = "Gummy"
+        }
+        //If gummy is more sold than choclate, I declare it as the bestseller. 
+        
+        if soldLol > max{
+            max = soldLol
+            best = "Lollipop"
+        }
+        //If lollipop is more sold than the previous declared bestseller, I declare it as the bestseller. 
+        
+        if soldCara > max{
+            max = soldCara
+            best = "Caramel"
+        }
+        //If caramel is more sold than the previous declared bestseller, I declare it as the bestseller. 
+        print("The bestseller is \(best).")
+        //Than I print it
+    }
+    
+    //This is the function to decide if restock is needed for every type of candy. 
+    func lowStock(){
+        if chocoStock < 3{
+            print("Restock needed for chocolate.")
+        }
+        if gumStock < 3{
+            print("Restock needed for gummy.")
+        }
+        if lolStock < 3{
+            print("Restock needed for lollipop.")
+        }
+        if caraStock < 3{
+            print("Restock needed for caramel.")
+        }
+        //When their stocks become less than 3 than the restock needed message appears. 
+    }
+    
+    //This is the main function that uses the previous functions inside it. This function is the whole program.
+    func run(){
+        for minute in 1...60{
+            //The program lasts for 60 minutes.
+            print("Minute:\(minute)")
+            //The minute is printed out.
+            if minute % 2 == 0 && gumStock > 0 {
+                soldGum += 1
+                gumStock -= 1
+                cash += gumPrice
+                print("Sold gummy")
+                //If minute is an even number and the gummy stock is bigger than 0 than sold gummy increases by 1, gummy stock decreases by 1, cash increases by the gummy price and sold gummy message appears. 
+            }
+            else if minute % 3 == 0 && lolStock > 0 {
+                soldLol += 1
+                lolStock -= 1
+                cash += lolPrice
+                print("Sold lollipop")
+                //The same thing happens for lollipop. But it happens when the minute can be divided into 3. 
+            }
+            else if minute % 5 == 0{
+                if chocoStock > 0{
+                    soldChoco += 1
+                    chocoStock -= 1
+                    cash += chocoPrice
+                    print("Sold chocolate")
+                    //If the minute is divisable to 5 than chocolate is sold. 
+                }
+                else if chocoStock == 0 && caraStock > 0{
+                    soldCara += 1
+                    caraStock -= 1
+                    cash += caraPrice
+                    print("Sold caramel")
+                    //If chocolate stock is 0 than caramel is sold.
+                }
+            }
+        }
+     lowStock()
+     bestseller()
+     totalstock()
+    //I call for the functions lowStock, bestseller and totalstock. 
+     print("Total money:\(cash)")   
+    //I print out the total money. 
+    }
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Text("🍭 Candy Shop Simulation 🍭")
+            //I write the title down.
+                .font(.title)
+                .bold()
+            
+            Button("Start Simulation"){
+                run()
+                //I add a start simulation button to run the program. 
+            }
+        }
+    }
+    }
 
