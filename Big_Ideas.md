@@ -222,15 +222,15 @@ I really struggled writing the **functions and variables** in the **correct plac
 
 ## [Enigma Machine Unplugged Game:]()
 **Collaboration:**
-I made this unplugged game mostly on my own. I asked my sister to help me with the paper cutting and creating the physical version of the game. She only helped with the creation of the physical design so she didn’t have ideas for the whole project for me to choose. 
+I made this unplugged game mostly on my own. I asked **my sister** to **help** me with the **paper cutting and creating the physical version** of the game. She only helped with the creation of the physical design so she didn’t have ideas for the whole project for me to choose. 
 
 **Program Function and Purpose:**
-The activity is basically a paper based simulation of an Enigma Machine that was used in World War 2. The users of the game follow the plugboard swaps at the start and check the rotor shifts to encode the letters. Its purpose is to teach the basics of encryption in an Enigma Machine without needing a computer. 
+The activity is basically a **paper based simulation** of an **Enigma Machine** that was used in World War 2. The users of the game follow the **plugboard** swaps at the start and check the **rotor** shifts to encode the letters. Its purpose is to teach the **basics of encryption** in an Enigma Machine **without needing a computer**. 
 
 **Program Design and Development:**
-I created the rules for the game, made an example with the theme of WW2 and organized the steps so players can do the encryption with the correct steps. I also created an introduction video with a script of wartime to engage players and make the game more interesting. 
+I **created the rules** for the game, made an **example with the theme of WW2** and **organized the steps** so players can do the encryption with the correct steps. I also **created an introduction video** with a **script of wartime** to engage players and make the game more interesting. 
 
 **Identifying and Correcting Errors:**
-While testing my puzzles, I found mistakes such as missed plugboard swaps or incorrect rotor shifts. I fixed these by checking each step slowly and re-solving the puzzles until everything matched the rules. After testing, all examples worked correctly.
+While testing my puzzles, I found **mistakes such as missed plugboard swaps** or **incorrect rotor shifts**. I **fixed** these **by checking** each step slowly and re-solving the puzzles until everything matched the rules. After testing, all examples worked correctly.
 
 <br>
