@@ -80,6 +80,22 @@
 
 <img src="PHOTO&GIF/Swift-1-Clock Game-Projects_App15.png" width="600">
 
+<br>
+
 ## [Swift Candy Shop Simulator](https://github.com/kaankoca-debug/kaankoca-debug.github.io/blob/main/Projects/Swift/My%20App%20copy%2019.swiftpm.zip)
 
 <img src="PHOTO&GIF/Swift-1-Candy-Projects_App19.png" width="600">  <img src="PHOTO&GIF/Swift-2-Candy-Projects_App19.png" width="600">
+
+<br>
+
+## [Swift List Projects]()
+
+<img src="PHOTO&GIF/Swift-V1-List-Projects.png" width="600">  <img src="PHOTO&GIF/Swift-V2-List-Projects.png" width="600">  <img src="PHOTO&GIF/Swift-V3-List-Projects.png" width="600">  <img src="PHOTO&GIF/Swift-V4-List-Projects.png" width="600">
+
+**Reflection:**
+
+As my theme I chose the alphabet becasue it was not hard to work with, and it was honestly the first idea that came to my mind when I started this project.
+
+I found that in lists, the first item isn't seen as 1 its seen as index 0, and it continues increasing by 1. 
+
+If I had more items in the list I would probably keep their fonts smaller because they wouldn't fit in the screen. Other than that I wouldn't chaneg anything because I think it's pretty straightforward. 
