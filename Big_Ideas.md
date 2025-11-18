@@ -188,6 +188,7 @@ I **didn't work on the design** a lot. I just put a **cone from the libary** of 
 **Identifying and Correcting Errors:**
 While working on the code I **really had a hard time on the for each part** because I had only used it once before and didn't understand what it really did. After solving this error I didn't have any major problems and finished the code correctly. 
 
+<br>
 
 ## [Swift Clock Game:]()
 **Collaboration:**
@@ -202,6 +203,8 @@ The program design and development was **really really hard and long** to be hon
 **Identifying and Correcting Errors:**
 I had **problems with the geo reader, drag gesture and for each** codes. I **tested** many many times for these mistakes to be corrected. I also **looked at my previous work** for the for each and geo reader codes. After a long long time of **debugging and testing** everything went smoothly. 
 
+<br>
+
 ## [Swift Candy Shop Simulator:]()
 **Collaboration:**
 I worked on this project **alone**. I didn’t have other people to give any other ideas which helped me **focus on my ideas** and practice Swift coding. 
@@ -214,3 +217,20 @@ I used **functions and loops**. I made **3 functions** for finding the **bestsel
 
 **Identifying and Correcting Errors:**
 I really struggled writing the **functions and variables** in the **correct places**. After solving that I had problems with for loops but I quickly learned my mistake and finished the program. 
+
+<br>
+
+## [Enigma Machine Unplugged Game:]()
+**Collaboration:**
+I made this unplugged game mostly on my own. I asked my sister to help me with the paper cutting and creating the physical version of the game. She only helped with the creation of the physical design so she didn’t have ideas for the whole project for me to choose. 
+
+**Program Function and Purpose:**
+The activity is basically a paper based simulation of an Enigma Machine that was used in World War 2. The users of the game follow the plugboard swaps at the start and check the rotor shifts to encode the letters. Its purpose is to teach the basics of encryption in an Enigma Machine without needing a computer. 
+
+**Program Design and Development:**
+I created the rules for the game, made an example with the theme of WW2 and organized the steps so players can do the encryption with the correct steps. I also created an introduction video with a script of wartime to engage players and make the game more interesting. 
+
+**Identifying and Correcting Errors:**
+While testing my puzzles, I found mistakes such as missed plugboard swaps or incorrect rotor shifts. I fixed these by checking each step slowly and re-solving the puzzles until everything matched the rules. After testing, all examples worked correctly.
+
+<br>
