@@ -1481,4 +1481,133 @@
         }
     }
     }
+    
+<br>
 
+## Enigma Machine Cryptography Unplugged Project
+
+<img src="PHOTO&GIF/Enigma Machine Unplugged Game Sketch.jpg" width="600">  <img src="PHOTO&GIF/Enigma Machine Unplugged Game.png" width="600">
+
+**NOTE: I DIDN'T WRITE THE CODE. I USED AI.**
+
+    import SwiftUI
+
+    func applyPlugboard(_ letter: Character) -> Character {
+    if letter == "A" { return "B" }
+    if letter == "B" { return "A" }
+    if letter == "C" { return "D" }
+    if letter == "D" { return "C" }
+    if letter == "E" { return "F" }
+    if letter == "F" { return "E" }
+    return letter
+    }
+
+
+    func applyRotor(_ letter: Character, shift: Int) -> Character {
+    let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var index = 0
+    var position = 0
+    
+
+    for ch in alphabet {
+        if ch == letter {
+            index = position
+            break
+        }
+        position += 1
+    }
+    
+
+    var newIndex = index + shift
+    while newIndex >= 26 {
+        newIndex -= 26
+    }
+    
+
+    position = 0
+    var result: Character = "A"
+    for ch in alphabet {
+        if position == newIndex {
+            result = ch
+            break
+        }
+        position += 1
+    }
+    
+    return result
+    }
+
+
+
+    struct ContentView: View {
+    
+    @State var inputText = ""
+    @State var plugboardText = ""
+    @State var finalText = ""
+    @State var rotorShift = 1
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            
+            Text("Mini Enigma (1 Rotor, Plugboard)")
+                .font(.title2).bold()
+            
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Input Letters:")
+                    .font(.headline)
+                TextField("Type a letter here", text: $inputText)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+            }
+            
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Plugboard (A↔️B, C↔️D, E↔️F)")
+                    .font(.headline)
+                Text("After Plugboard: \(plugboardText)")
+                    .font(.system(.body, design: .monospaced))
+            }
+            
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Rotor (simple shift)")
+                    .font(.headline)
+                HStack {
+                    Text("Rotor shift: \(rotorShift)")
+                    Stepper("", value: $rotorShift, in: 0...25)
+                        .labelsHidden()
+                }
+                Text("Final Output: \(finalText)")
+                    .font(.system(.body, design: .monospaced))
+            }
+            
+            Button("Encrypt") {
+                let upper = inputText.uppercased()
+                var tempPlugboard = ""
+                var tempFinal = ""
+                
+                for ch in upper {
+                    if ch >= "A" && ch <= "Z" {
+                        let afterPlug = applyPlugboard(ch)
+                        tempPlugboard.append(afterPlug)
+                        
+                        let afterRotor = applyRotor(afterPlug, shift: rotorShift)
+                        tempFinal.append(afterRotor)
+                    } else {
+
+                        tempPlugboard.append(ch)
+                        tempFinal.append(ch)
+                    }
+                }
+                
+                plugboardText = tempPlugboard
+                finalText = tempFinal
+            }
+            .buttonStyle(.borderedProminent)
+            
+            Spacer()
+        }
+        .padding()
+        .frame(width: 450, height: 450)
+    }
+    }
