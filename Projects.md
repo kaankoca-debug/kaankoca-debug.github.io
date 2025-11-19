@@ -99,3 +99,15 @@ As my theme I chose the alphabet becasue it was not hard to work with, and it wa
 I found that in lists, the first item isn't seen as 1 its seen as index 0, and it continues increasing by 1. 
 
 If I had more items in the list I would probably keep their fonts smaller because they wouldn't fit in the screen. Other than that I wouldn't chaneg anything because I think it's pretty straightforward. 
+
+<br>
+
+## [Enigma Machine Unplugged Project]()
+<img src="PHOTO&GIF/Swift-1-Projects-Enigma_App1.png" width="600">  <img src="PHOTO&GIF/Enigma Machine Unplugged Game.png" width="600">
+
+**NOTE: I DIDN'T WRITE THE CODE. I USED AI.**
+
+**Reflection:**
+When I started the project I decided to teach people how to use the Enigma Machine with an unplugged and simple version of the machine. But first I had to understand how the machine worked. To fully understand it I chatted with ChatGPT for hours trying to make sure I wa sperfect at the topic. I first asked what the machine was and how it worked than I asked ChatGPT to create me quizzes. After the first quiz I saw that I didn't understand the machine. Than I made 10 other quizzes when each one was getting harder. After the "Ultimate Enigma Exam" I was sure that I was ready to create a game. I asked ChatGPT to create me images of examples for unplugged games like this and I used some parts of many different images and created a sketch with my sister who is good at drawing. After the sketch I used white cardboard, some markers and a pin to create the unplugged game. After creating the physical version I had to create a video for people to be more interested in the game. I wrote a script about World War 2 where this machine was originally used in and created the video from iMovie. I think it was a very instructional project where I learned almost everything I know about Cryptology. 
+
+<br>
