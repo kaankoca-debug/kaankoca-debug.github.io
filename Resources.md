@@ -34,3 +34,8 @@
 
 ## [Swift Clock Game Tutorial](https://drive.google.com/file/d/13K7hrXaQa8BKbE7oOgMzItOk94UAQXjw/view?usp=sharing)
 
+## [Swift Candy Shop Simulator Tutorial](https://drive.google.com/file/d/1iPJss0g6_n-u3s52F7dFXHCecM-M3JgE/view?usp=sharing)
+
+## [Cryptology Enigma Machine Unplugged Game Explanation](https://drive.google.com/file/d/1mcv4cAMxYgMREcXlbG13LKt8kmQjGX2t/view?usp=sharing)
+
+## [Cryptology Enigma Machine Unplugged Game Trailer](https://drive.google.com/file/d/1DcXKCXQ96uypOkJ2wuzL6KO7M67P36gS/view?usp=sharing)
