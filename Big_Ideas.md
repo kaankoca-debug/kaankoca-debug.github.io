@@ -234,3 +234,36 @@ I **created the rules** for the game, made an **example with the theme of WW2** 
 While testing my puzzles, I found **mistakes such as missed plugboard swaps** or **incorrect rotor shifts**. I **fixed** these **by checking** each step slowly and re-solving the puzzles until everything matched the rules. After testing, all examples worked correctly.
 
 <br>
+
+## [Swift City Clock List Project:]()
+
+
+<br>
+
+## [Swift City Clock List Project:]()
+**Collaboration:**
+I worked on this project **by myself**. Doing it alone helped me practice thinking through the code **without asking** anyone **for help**.
+
+**Program Function and Purpose:**
+The program **shows** the **times in Istanbul, Texas, London, and Nice**. When Istanbul is 10:21, the program **prints the correct times** for the other cities. Its purpose is to display different city times using simple Swift code.
+
+**Program Design and Development:**
+I used **two lists**. The first list for the **city names** and one list for **their times**. Then I printed them side by side to show the world clock. The project was simple except for arranging the lists.
+
+**Identifying and Correcting Errors:**
+I had **trouble pushing the second list** to the right side when printing. After testing a few times, I fixed the spacing and the times lined up correctly on the screen.
+
+<br>
+
+## [Swift Ice Cream List Project:]()
+**Collaboration:**
+I worked on this project **alone**. Doing it by myself helped me **understand lists better** and focus on organizing the information clearly.
+
+**Program Function and Purpose:**
+The program basically shows **ice cream flavors and their prices**. It **lists them side by side** so the user can see which flavor costs what. It's purpose is to practice using two related lists in Swift.
+
+**Program Design and Development:**
+I made **one list for the flavors** and **another for the prices**. Then I printed them together in the correct order so **each flavor matched it's price**. The design was simple but helped me learn how to connect two lists.
+
+**Identifying and Correcting Errors:**
+My main problem in the project was **getting the prices to line up with the flavors**. After testing a few times and adjusting the **spacing**, everything displayed correctly and looked neat.
