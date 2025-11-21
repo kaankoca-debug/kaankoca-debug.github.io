@@ -235,8 +235,18 @@ While testing my puzzles, I found **mistakes such as missed plugboard swaps** or
 
 <br>
 
-## [Swift City Clock List Project:]()
+## [Swift Lists and Arrays Project:]()
+**Collaboration:**
+I worked on this project **alone**. Doing it by myself helped me focus and understand **how lists work** without any help from others.
 
+**Program Function and Purpose:**
+The program creates a **simple grocery list** using one list of items. It **prints the list onto the screen** just like a real shopping list. Its purpose is to practice using lists/arrays in Swift.
+
+**Program Design and Development:**
+I made **one list** that included all the grocery items I wanted. Then I **printed each item** to make it look like a clean list. I **also designed a physical paper version** where I drew how I wanted the list to look, which helped me plan the program better.
+
+**Identifying and Correcting Errors:**
+I **didn't have major errors**, but I practiced printing the list in different ways to understand arrays fully. **Testing the program helped me** learn how lists work in Swift and how to display them correctly.
 
 <br>
 
