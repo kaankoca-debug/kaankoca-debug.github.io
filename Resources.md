@@ -39,3 +39,7 @@
 ## [Cryptology Enigma Machine Unplugged Game Explanation](https://drive.google.com/file/d/1mcv4cAMxYgMREcXlbG13LKt8kmQjGX2t/view?usp=sharing)
 
 ## [Cryptology Enigma Machine Unplugged Game Trailer](https://drive.google.com/file/d/1DcXKCXQ96uypOkJ2wuzL6KO7M67P36gS/view?usp=sharing)
+
+## [Swift City Clock List Tutorial](https://drive.google.com/file/d/1YGmBx9QfYZB_dJUeY_EB8O29bfzE5EoY/view?usp=drive_link)
+
+## [Swift Ice Cream Shop List Tutorial](https://drive.google.com/file/d/1dZKMFNUVXXEM8FcZ3ysi77rVJSqcjCqA/view?usp=drive_link)
