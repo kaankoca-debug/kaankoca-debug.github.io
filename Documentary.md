@@ -1481,7 +1481,74 @@
         }
     }
     }
+
+<br>
+
+## List/Array Project
+
+**List Preparation on Paper**
+
+<img src="PHOTO&GIF/List-Paper-Preparation.png" width="600">
+
+**V1 on Swift Playground Books**
+
+<img src="PHOTO&GIF/Swift-V1-List-Projects.png" width="600">
+
+    var myList = ["a","b","c","d","e","f","g","h"]
+
+    print(myList)
+
+**V2 on Swift Playground Books**
+
+<img src="PHOTO&GIF/Swift-V2-List-Projects.png" width="600">
+
+    var myList = ["a","b","c","d","e","f","g","h"]
+
+    print(myList.joined(separator:"           "))
+
+**V3 on Swift Playground**
+
+<img src="PHOTO&GIF/Swift-V3-List-Projects.png" width="600">
+
+**V4 on Swift Playground**
+
+<img src="PHOTO&GIF/Swift-V4-List-Projects.png" width="600">
+
+    //15/11/2025
+    import SwiftUI
+    struct ContentView: View {
+    let shopList = ["🍎 Apple",
+                    "🍌 Banana",
+                    "🍪 Cookie",
+                    "🥛 Milk",
+                    "🍞 Bread",
+                    "🧀 Cheese",
+                    "🍫 Chocolate",
+                    "🍇 Grapes"]
+    //I created a list that contains 8 grocery items. 
     
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Grocery List")
+                .font(.title)
+                .bold()
+                .padding()
+            //I wrote a title as grocery list.
+            
+            ForEach(shopList.indices, id: \.self) { step in
+                HStack {
+                    Text(shopList[step])
+                    Spacer()
+                    //I wrote down the grocery list and used a spacer to push the next things that are going to be written to the right side of the screen. 
+                    Text("(\(step))")
+                    //I wrote down index numbers to the right side of the screen
+                }
+            }
+        }
+    }
+    }
+
+
 <br>
 
 ## Enigma Machine Cryptography Unplugged Project
@@ -1611,3 +1678,90 @@
         .frame(width: 450, height: 450)
     }
     }
+
+<br>
+
+## Swift World Clock List Project
+
+<img src="PHOTO&GIF/Swift-1-CityClockList-Documentary.png" width="600"> 
+
+    //18/11/2025
+    import SwiftUI
+    struct ContentView: View {
+    let CityList = ["🇹🇷 İstanbul",
+                    "🏴󠁧󠁢󠁥󠁮󠁧󠁿 London",
+                    "🇺🇸 Texas",
+                    "🇫🇷 Nice"]
+    //I created a list that contains 4 cities that have different times. 
+    
+    let ClockList = ["10:21",
+                     "08:21",
+                     "02:21",
+                     "09:21"]
+    //Than I created a list that contains the times in the cities when the time in Istanbul is 10:21. 
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("City Clock")
+                .font(.title)
+                .bold()
+                .padding()
+            //I wrote the title which is "City Clock".
+            
+            ForEach(CityList.indices, id: \.self) { step in
+                HStack {
+                    Text(CityList[step])
+                    Spacer()
+                    //I used ForEach to create a statement for each of the items in the citylist. I wrote down the citylist steps. Used a spacer to push the next items to the right side of the screen.
+                    
+                    Text("(\(ClockList[step]))")
+                    //Then I wrote the times to the right side. 
+                }
+            }
+        }
+    }
+    }
+
+<br>
+
+## Swift Ice Crean Shop List Project
+
+<img src="PHOTO&GIF/Swift-1-IceCreamList-Projects_App7.png" width="600"> 
+
+    //18/11/2025
+    import SwiftUI
+    struct ContentView: View {
+    let flavorList = ["Chocolate",
+                    "Vanilla",
+                    "Strawberry",
+                    "Nutella"]
+    //I created a list that contains 4 types of ice cream flavors in it. 
+    
+    let priceList = ["2 Dollars",
+                     "2 Dollars",
+                     "3 Dollars",
+                     "4 Dollars"]
+    //Then I created another list that contains the prices of these flavors. 
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("🍦 Ice Cream Shop")
+                .font(.title)
+                .bold()
+                .padding()
+            //I wrote the title to the ice cream shop. 
+            
+            ForEach(flavorList.indices, id: \.self) { step in
+                HStack {
+                    Text(flavorList[step])
+                    Spacer()
+                    //I used ForEach to create a statement for all the items in the list. I wrote all the steps of the flavorList. Then used a spacer to push the next texts to the other side of the screen. 
+                    
+                    Text("\(priceList[step])")
+                    //Finally I printed out the prices of the flavors in order. 
+                }
+            }
+        }
+    }
+    }
+
