@@ -37,5 +37,14 @@ This quiz was about extracting information from data. The topic was mainly about
 # General Quiz 1:
 This quiz was actually a preparation for the exam on 27 October 2025. I didn't find the quiz so hard because the questions weere mainly about logic and data. Also the vidoes on Collegeboard helped a lot. I got a 18/21 on the quiz. One of them was because I didn't understand the question, one of them was a basic detail miss and the other was because I didn't know about the topic. 
 
+<br>
+
 # General Quiz 2:
 This quiz was another and much better preparation for the exam. I think the questions on this quiz were harder but less in amount. So the time wasn't a problem. There were code questions which surprised me. The first few questions were about the topic of AP CSP. The other 2 questions were about pseudocode/algorithm writing and codes.  
+
+<br>
+
+# Quiz U31:
+This quiz was the first quiz that was about the third unit of CSP. I didn’t know there was going to be a quiz and honestly knew so less about the third unit. So I didn’t get a score I normally would. There were many questions about logic which gave me a little bit of advantage. Next time I’m going to be ready for pop quizzes by working on the topics all the time. 
+
+<br>
