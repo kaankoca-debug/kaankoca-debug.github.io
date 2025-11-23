@@ -277,3 +277,34 @@ I made **one list for the flavors** and **another for the prices**. Then I print
 
 **Identifying and Correcting Errors:**
 My main problem in the project was **getting the prices to line up with the flavors**. After testing a few times and adjusting the **spacing**, everything displayed correctly and looked neat.
+
+<br>
+
+## [Swift My Initials With Code:]()
+**Collaboration:**
+I worked on this project alone. Doing it by myself helped me focus and try different ideas without distractions.
+
+**Program Function and Purpose:**
+The program lets the user pick a letter and an emoji. It creates the letter on a 10x10 box using the emoji chosen. The goal was to practice making interactive visuals with Swift.
+
+**Program Design and Development:** 
+I made buttons for letters and emojis, then wrote logic to fill the right cells for each letter. I tested each letter and adjusted the patterns so they looked correct.
+
+**Identifying and Correcting Errors:** 
+Some letters, like Y, didn’t look right at first. I fixed them by checking each cell and tweaking the code. Testing with different emojis helped me make sure everything worked.
+
+<br>
+
+## [Figma Mood Mixer App Design]()
+**Collaboration:**
+I worked on this project alone. Doing it by myself let me explore my own ideas and make design choices freely.
+
+**Program Function and Purpose:**
+The project was purely visual. I designed an app interface to practice layout, colors, and usability. The goal was to get comfortable with Figma and improve my design thinking.
+
+**Program Design and Development:**
+I experimented with different layouts, buttons, and colors. By arranging elements and trying multiple ideas, I learned how to create clear and attractive designs.
+
+**Identifying and Correcting Errors:**
+I had problems with the colorings and the spacings. Then I fixed them by testing the design over and over again. 
+
