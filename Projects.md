@@ -121,3 +121,31 @@ When I started the project I decided to teach people how to use the Enigma Machi
 <img src="PHOTO&GIF/Swift-1-IceCreamList-Projects_App7.png" width="600"> 
 
 <br>
+
+## [Swift My Initials With Code V1](https://github.com/kaankoca-debug/kaankoca-debug.github.io/blob/main/Projects/Swift/My%20App%20copy%208.swiftpm.zip)
+<img src="PHOTO&GIF/Swift-1-InitialsV1-Projects.png" width="600"> 
+
+<br>
+
+## [Swift My Initials With Code V2](https://github.com/kaankoca-debug/kaankoca-debug.github.io/blob/main/Projects/Swift/My%20App%20copy%209.swiftpm.zip)
+<img src="PHOTO&GIF/Swift-1-InitialsV2-Projects.png" width="600"> 
+
+<br>
+
+## [Swift My Initials With Code V2.5](https://github.com/kaankoca-debug/kaankoca-debug.github.io/blob/main/Projects/Swift/My%20App%20copy%2011.swiftpm.zip)
+<img src="PHOTO&GIF/Swift-1-Initialsv2.5-Projects.png" width="600"> 
+
+<br>
+
+
+## [Mood Mixer App Design in Figma](https://www.figma.com/design/wiPlKXoisFMnw87RjEsz06/Mood-Mixer?node-id=0-1&t=uwuQlP8Hfe4NVqh1-1)
+<img src="PHOTO&GIF/Figma-Mood_Mixer-Projects.png" width="600"> 
+
+**Reflection:**
+
+Nadin's work inspired me because I never though a competition like WWDC can have a successor that came out of a Turkish School such as Hisar. 
+
+I would like to explore the idea of creating music by adding up different audio files. For example adding an audo where there is saxaphone, an audo where there is guitar, an audio where there is piano and put them together to create a proper song. 
+
+<br>
+
