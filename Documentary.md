@@ -1765,3 +1765,308 @@
     }
     }
 
+<br>
+
+## Swift My Initials With Code V1
+
+<img src="PHOTO&GIF/Swift-1-InitialsV1-Documentary.png" width="600"> 
+
+    //23/11/2025
+    import SwiftUI
+
+    struct ContentView: View {
+    var body: some View {
+        // Display two Ks side by side with some space in between
+        HStack(spacing: 20) {
+            LetterK()  // First K
+            LetterK()  // Second K
+        }
+        .padding()  // Add some padding around the whole HStack
+    }
+    }
+
+    // This is a function that draws the letter K using a 10x10 grid of circles
+    func LetterK() -> some View {
+    let gridSize = 10        // The grid is 10 rows by 10 columns
+    let circleSize: CGFloat = 20  // Each circle is 20x20 points in size
+    let spacing: CGFloat = 4      // Space between circles
+    
+    // Here I chose which circles are filled to make the K shape
+    // 1 = red circle which are filled, 0 = gray circle which are empty
+    let pattern: [[Int]] = [
+        [1,0,0,0,0,1,0,0,0,0],
+        [1,0,0,0,1,0,0,0,0,0],
+        [1,0,0,1,0,0,0,0,0,0],
+        [1,0,1,0,0,0,0,0,0,0],
+        [1,1,0,0,0,0,0,0,0,0],
+        [1,1,0,0,0,0,0,0,0,0],
+        [1,0,1,0,0,0,0,0,0,0],
+        [1,0,0,1,0,0,0,0,0,0],
+        [1,0,0,0,1,0,0,0,0,0],
+        [1,0,0,0,0,1,0,0,0,0]
+    ]
+    
+    // Build the actual grid of circles using VStack and HStack
+    return VStack(spacing: spacing) {
+        ForEach(0..<gridSize, id: \.self) { row in
+            HStack(spacing: spacing) {
+                ForEach(0..<gridSize, id: \.self) { col in
+                    Circle()
+                        .fill(pattern[row][col] == 1 ? Color.red : Color.gray.opacity(0.2)) // Fill red if 1, otherwise gray
+                        .frame(width: circleSize, height: circleSize)  // Set the size of each circle
+                }
+            }
+        }
+    }
+    }
+
+<br>
+
+## Swift My Initials With Code V2
+
+<img src="PHOTO&GIF/Swift-1-InitialsV2-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-2-InitialsV2-Documentary.png" width="600"> 
+
+    //23/11/2025
+    import SwiftUI
+    struct ContentView: View {
+    @State private var selectedEmoji = "🟩" // Stores the currently selected emoji and the starting emoji is 🟩. 
+    var body: some View {
+        VStack(spacing: 10) {
+            
+            // Emoji selection buttons
+            HStack(spacing: 5) {
+                Button("🇹🇷") { selectedEmoji = "🇹🇷" }
+                Button("🤕") { selectedEmoji = "🤕" }
+                Button("🙃") { selectedEmoji = "🙃" }
+                Button("🌝") { selectedEmoji = "🌝" }
+                Button("🟧") { selectedEmoji = "🟧" }
+                Button("❤️‍🔥") { selectedEmoji = "❤️‍🔥" }
+                Button("🔱") { selectedEmoji = "🔱" }
+                Button("🐣") { selectedEmoji = "🐣" }
+                Button("👺") { selectedEmoji = "👺" }
+                Button("🥳") { selectedEmoji = "🥳" }
+            }
+            // Display two Ks side by side
+            HStack(spacing: 4) {
+                LetterK(emoji: selectedEmoji) // Draw the first K
+                LetterK(emoji: selectedEmoji) // Draw the second K
+            }
+        }
+    }
+    }
+    // Function that draws one K using a 10x10 emoji grid
+    func LetterK(emoji: String) -> some View {
+    let empty = "⬜️" // Emoji for empty cells
+    // Pattern of the K: 1 = filled, 0 = empty
+    let pattern: [[Int]] = [
+        [1,0,0,0,0,1,0,0,0,0],
+        [1,0,0,0,1,0,0,0,0,0],
+        [1,0,0,1,0,0,0,0,0,0],
+        [1,0,1,0,0,0,0,0,0,0],
+        [1,1,0,0,0,0,0,0,0,0],
+        [1,1,0,0,0,0,0,0,0,0],
+        [1,0,1,0,0,0,0,0,0,0],
+        [1,0,0,1,0,0,0,0,0,0],
+        [1,0,0,0,1,0,0,0,0,0],
+        [1,0,0,0,0,1,0,0,0,0]
+    ]
+    // Stack rows vertically
+    return VStack(spacing: 0) {
+        ForEach(0..<10, id: \.self) { row in
+            // Stack columns horizontally inside each row
+            HStack(spacing: 0) {
+                ForEach(0..<10, id: \.self) { col in
+                    // Show selected emoji if pattern is 1, else show empty emoji
+                    Text(pattern[row][col] == 1 ? emoji : empty)
+                        .font(.system(size: 20))
+                }
+            }
+        }
+    }
+    }
+
+<br>
+
+## Swift My Initials With Code V2.5
+
+<img src="PHOTO&GIF/Swift-1-Initialsv2.5-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-4-Initialsv2.5-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-2-Initialsv2.5-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-3-Initialsv2.5-Documentary.png" width="600"> 
+
+    //23/11/2025
+    import SwiftUI
+    struct ContentView: View {
+    @State private var selectedEmoji = "🟩"
+    // Stores the currently selected emoji, default is 🟩
+    @State private var selectedLetter: Character = "A"
+    // Stores the currently selected letter, default is "A"
+    var body: some View {
+        VStack(spacing: 15) { // Stack elements vertically with spacing
+            // 1️⃣ Emoji selection buttons
+            HStack(spacing: 5) { // Horizontal row of emoji buttons
+                ForEach(["🟩", "❤️", "🌝", "🐣", "🤕"], id: \.self) { emoji in
+                    Button(emoji) { selectedEmoji = emoji } // Click to pick emoji
+                }
+            }
+            // 2️⃣ Letter selection (scrollable)
+            ScrollView(.horizontal) { // Make the letters scrollable horizontally
+                HStack(spacing: 5) { // Row of letter buttons
+                    ForEach("ABCDEFGHIJKLMNOPQRSTUVWXYZ".map { String($0) }, id: \.self) { letter in
+                        Button(letter) { selectedLetter = Character(letter) } // Pick letter
+                    }
+                }
+            }
+            // 3️⃣ Display the selected letter using emojis
+            LetterGridView(letter: selectedLetter, emoji: selectedEmoji)
+        }
+    }
+    }
+    // Subview for displaying a letter in a 10x10 emoji grid
+    struct LetterGridView: View {
+    let letter: Character
+    let emoji: String
+    let empty = "⬜️" // Placeholder for empty cells
+    var body: some View {
+        VStack(spacing: 0) { // Stack rows vertically
+            ForEach(0..<10, id: \.self) { row in
+                HStack(spacing: 0) { // Stack columns horizontally
+                    ForEach(0..<10, id: \.self) { col in
+                        // If the cell should be filled, show emoji; else show empty square
+                        Text(drawLetterCell(letter: letter, row: row, col: col) ? emoji : empty)
+                            .font(.system(size: 20)) // Emoji size
+                    }
+                }
+            }
+        }
+    }
+    }
+    // The bitmap logic stays the same as your previous version
+    func drawLetterCell(letter: Character, row: Int, col: Int) -> Bool {
+    switch letter {
+    case "A":
+        if col == 1 && row > 1 { return true }
+        if col == 8 && row > 1 { return true }
+        if row == 1 && col > 2 && col < 7 { return true }
+        if row == 4 && col >= 2 && col <= 7 { return true }
+        return false
+    case "B":
+        if col == 1 { return true }
+        if row == 1 || row == 4 || row == 8 { return true }
+        if col == 8 && row != 1 && row != 4 && row != 8 { return true }
+        return false
+    case "C":
+        if col == 1 { return true }
+        if row == 1 || row == 8 { return true }
+        return false
+    case "D":
+        if col == 1 { return true }
+        if col == 8 && row > 1 && row < 8 { return true }
+        if row == 1 || row == 8 { return true }
+        return false
+    case "E":
+        if col == 1 { return true }
+        if row == 1 || row == 4 || row == 8 { return true }
+        return false
+    case "F":
+        if col == 1 { return true }
+        if row == 1 || row == 4 { return true }
+        return false
+    case "G":
+        if row == 1 && col >= 2 && col <= 7 { return true }
+        if row == 8 && col >= 2 && col <= 7 { return true }
+        if col == 1 && row >= 2 && row <= 7 { return true }
+        if col == 7 && row >= 4 { return true }
+        if row == 4 && col >= 4 { return true }
+        return false
+    case "H":
+        if col == 1 || col == 8 { return true }
+        if row == 4 { return true }
+        return false
+    case "I":
+        if row == 1 || row == 8 { return true }
+        if col == 4 { return true }
+        return false
+    case "J":
+        if row == 1 { return true }
+        if col == 4 && row <= 7 { return true }
+        if row == 8 && col >= 2 { return true }
+        if col == 2 && row >= 6 { return true }
+        return false
+    case "K":
+        if col == 1 { return true }
+        if row + col == 9 { return true }
+        if row == col - 1 { return true }
+        return false
+    case "L":
+        if col == 1 { return true }
+        if row == 8 { return true }
+        return false
+    case "M":
+        if col == 1 || col == 8 { return true }
+        if row == col && row <= 4 { return true }
+        if row + col == 9 && row <= 4 { return true }
+        return false
+    case "N":
+        if col == 1 || col == 8 { return true }
+        if row == col { return true }
+        return false
+    case "O":
+        if (row == 1 || row == 8) && col >= 2 && col <= 7 { return true }
+        if (col == 1 || col == 8) && row >= 2 && row <= 7 { return true }
+        return false
+    case "P":
+        if col == 1 { return true }
+        if (row == 1 || row == 4) && col <= 6 { return true }
+        if col == 6 && row <= 3 { return true }
+        return false
+    case "Q":
+        if (row == 1 || row == 8) && col >= 2 && col <= 7 { return true }
+        if (col == 1 || col == 8) && row >= 2 && row <= 7 { return true }
+        if row >= 5 && col >= 5 { return true }
+        return false
+    case "R":
+        if col == 1 { return true }
+        if (row == 1 || row == 4) && col <= 6 { return true }
+        if col == 6 && row <= 3 { return true }
+        if row >= 5 && col == row - 1 { return true }
+        return false
+    case "S":
+        if row == 1 || row == 4 || row == 8 { return true }
+        if col == 1 && row < 4 { return true }
+        if col == 7 && row > 4 { return true }
+        return false
+    case "T":
+        if row == 1 { return true }
+        if col == 4 { return true }
+        return false
+    case "U":
+        if col == 1 || col == 8 { return true }
+        if row == 8 && col >= 2 && col <= 7 { return true }
+        return false
+    case "V":
+        if col == 1 || col == 8 { return true }
+        if row >= 4 && (col == row - 3 || col == 11 - row) { return true }
+        return false
+    case "W":
+        if col == 1 || col == 8 { return true }
+        if row >= 4 && (col == row - 3 || col == 11 - row) { return true }
+        return false
+    case "X":
+        if col == row { return true }
+        if row + col == 9 { return true }
+        return false
+    case "Y":
+        if row <= 4 {
+            if row == col { return true }
+            if row + col == 9 { return true }
+        }
+        if row >= 5 && col == 4 { return true }
+        return false
+    case "Z":
+        if row == 1 || row == 8 { return true }
+        if row + col == 9 { return true }
+        return false
+    default:
+        return false
+    }
+    }
+
+<br>
