@@ -1725,7 +1725,7 @@
 
 <br>
 
-## Swift Ice Crean Shop List Project
+## Swift Ice Cream Shop List Project
 
 <img src="PHOTO&GIF/Swift-1-IceCreamList-Projects_App7.png" width="600"> 
 
