@@ -134,7 +134,7 @@ When I started the project I decided to teach people how to use the Enigma Machi
 <br>
 
 ## [Swift My Initials With Code V2.5](https://github.com/kaankoca-debug/kaankoca-debug.github.io/blob/main/Projects/Swift/My%20App%20copy%2011.swiftpm.zip)
-<img src="PHOTO&GIF/Swift-1-Initialsv2.5-Projects.png" width="600"> 
+<img src="PHOTO&GIF/Swift-1-Initials_V2.5-Projects_AppCopy11.png" width="600"> 
 
 <br>
 
@@ -150,3 +150,7 @@ I would like to explore the idea of creating music by adding up different audio 
 
 <br>
 
+## [Swift Pixel Art](https://github.com/kaankoca-debug/kaankoca-debug.github.io/blob/main/Projects/Swift/My%20App%20copy%2018.swiftpm.zip)
+<img src="PHOTO&GIF/Swift-1-PixelArt-Projects_AppCopy18.png" width="600"> 
+
+<br>
