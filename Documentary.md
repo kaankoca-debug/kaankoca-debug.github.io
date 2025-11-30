@@ -2069,3 +2069,91 @@
     }
 
 <br>
+
+## Swift Pixel Art
+
+<img src="PHOTO&GIF/Swift-1-PixelArt-Documentary_AppCopy18.png" width="600"> <img src="PHOTO&GIF/Swift-2-PixelArt-Documentary_AppCopy18.png" width="600"> 
+
+    //28/11/2025
+    import SwiftUI
+    struct ContentView: View {
+    
+    let cellsList = [0...99]
+    //I create a list that contains numbers between 0 and 99. 
+    @State var cellColors = Array(repeating: Color.gray, count: 100)
+    //I create an array that includes 100 gray colors in it. 
+    @State var text = ""
+    //I create the variable text to use it on giving messages. 
+    @State var message = ""
+    //I create the variable message to use it on giving messages.
+    
+    var body: some View {
+        VStack() {
+            
+            Text("10 × 10 Grid")
+                .font(.title)
+                .bold()
+            //ı write the title. 
+            
+            TextField("Enter cell number (0–99)", text: $text)
+                .background(Color.yellow.opacity(0.2))
+                .cornerRadius(10)
+                .padding()
+            //I create a textfield for people to write a number between 0 and 99 to paint. 
+            
+            Button("Paint Cell") {
+                changeColor()
+                //I create a button that calls the function changeColor() when pressed. 
+            }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+            
+            Text(message)
+                .foregroundColor(.red)
+            //I write down the message that will write down whatever I write and paint it red. 
+            drawGrid()
+            //Call the function drawGrid()
+            
+        }
+    }
+    func drawGrid() -> some View {
+        VStack(spacing: 4) {
+            ForEach(0..<10, id: \.self) { row in
+                HStack(spacing: 5) {
+                    //For every row that will be printed between 0 and 10. So 9
+                    ForEach(0..<10, id: \.self) { col in
+                        //And for each colon that will be printed between 0 and 10. So 9
+                        
+                        let index = row * 10 + col
+                        //The numbers of the squares are being found out. For example row 3 colon 4 is square number 3*10+4=34. 
+                        
+                        Rectangle()
+                            .fill(cellColors[index])
+                            .frame(width: 35, height: 35)
+                            .overlay(
+                                Text("\(index)")
+                                    .foregroundColor(.white))
+                        //I create the rectangles inside the for each to write down all the 100 squares on the screen. 
+                    }
+                }
+            }
+        }
+    }
+    
+    func changeColor() {
+        if let number = Int(text), number >= 0 && number < 100 {
+            //The string that was written inside the texfield is being turned into an integer to make it easer for me to use it when finding the square. I used if "let" number. I used let because if I don't write let, when a non integer is written swift gives error. Let makes sure that the process concludes succesfully and that the string turns into an integer.  
+            cellColors[number] = .red
+            //The painted squares will be red. 
+            message = "Painted cell \(number)"
+            //The message I mentioned before is goint to be painted cell cell no
+        } else {
+            message = "Invalid input"
+            //If the written text isn't an integer than the invalid output will be the message. 
+        }
+    }
+    }
+
+<br>
