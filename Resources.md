@@ -6,7 +6,7 @@
 
 ## [Scratch Tic Tac Toe Tutorial](https://drive.google.com/file/d/1gfkClsnsi_kvz91xjAdyCGXrz0tZLPny/view?usp=sharing)
 
-## [Swift App Tutorial](https://drive.google.com/file/d/1V3elbn8_UBh9dNDeWAhdtWxGoYbjAoe-/view?usp=sharing)
+## [Swift Tic Tac Toe App Tutorial](https://drive.google.com/file/d/1V3elbn8_UBh9dNDeWAhdtWxGoYbjAoe-/view?usp=sharing)
 
 ## [Swift Favorites Tutorial](https://drive.google.com/file/d/17s3slei2xLLGBJNeC3e-VG8g7rzHtdGP/view?usp=sharing)
 
