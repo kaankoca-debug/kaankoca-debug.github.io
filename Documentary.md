@@ -1890,56 +1890,54 @@
 
 ## Swift My Initials With Code V2.5
 
-<img src="PHOTO&GIF/Swift-1-Initialsv2.5-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-4-Initialsv2.5-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-2-Initialsv2.5-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-3-Initialsv2.5-Documentary.png" width="600"> 
+<img src="PHOTO&GIF/Swift-1-Initials_V2.5-Documentary_AppCopy11.png" width="600">  <img src="PHOTO&GIF/Swift-2-Initials_V2.5-Documentary_AppCopy11.png" width="600">  <img src="PHOTO&GIF/Swift-3-Initials_V2.5-Documentary_AppCopy11.png" width="600">
 
     //23/11/2025
     import SwiftUI
     struct ContentView: View {
-    @State private var selectedEmoji = "🟩"
-    // Stores the currently selected emoji, default is 🟩
+    @State private var selectedEmoji = "🌝"
+    // Stores the currently selected emoji, default is 🌝
     @State private var selectedLetter: Character = "A"
-    // Stores the currently selected letter, default is "A"
+    // Stores the currently selected letter, default is the letter A
     var body: some View {
-        VStack(spacing: 15) { // Stack elements vertically with spacing
-            // 1️⃣ Emoji selection buttons
-            HStack(spacing: 5) { // Horizontal row of emoji buttons
+        VStack(spacing: 15) {
+
+            HStack(spacing: 5) {
                 ForEach(["🟩", "❤️", "🌝", "🐣", "🤕"], id: \.self) { emoji in
-                    Button(emoji) { selectedEmoji = emoji } // Click to pick emoji
+                    Button(emoji) { selectedEmoji = emoji }
+                    //I basically print out all the emojis that the user can use side by side. 
                 }
             }
-            // 2️⃣ Letter selection (scrollable)
-            ScrollView(.horizontal) { // Make the letters scrollable horizontally
-                HStack(spacing: 5) { // Row of letter buttons
+                HStack(spacing: 5) { 
                     ForEach("ABCDEFGHIJKLMNOPQRSTUVWXYZ".map { String($0) }, id: \.self) { letter in
-                        Button(letter) { selectedLetter = Character(letter) } // Pick letter
+                        Button(letter) { selectedLetter = Character(letter) }
+                            .foregroundColor(.indigo)
+                        //In here I printed the alphabet for the user to choose from. 
                     }
                 }
             }
-            // 3️⃣ Display the selected letter using emojis
             LetterGridView(letter: selectedLetter, emoji: selectedEmoji)
         }
     }
-    }
-    // Subview for displaying a letter in a 10x10 emoji grid
+
+
     struct LetterGridView: View {
     let letter: Character
     let emoji: String
-    let empty = "⬜️" // Placeholder for empty cells
+    let empty = "🌑"
     var body: some View {
-        VStack(spacing: 0) { // Stack rows vertically
+        VStack(spacing: 0) { 
             ForEach(0..<10, id: \.self) { row in
-                HStack(spacing: 0) { // Stack columns horizontally
+                HStack(spacing: 0) {
                     ForEach(0..<10, id: \.self) { col in
-                        // If the cell should be filled, show emoji; else show empty square
+  
                         Text(drawLetterCell(letter: letter, row: row, col: col) ? emoji : empty)
-                            .font(.system(size: 20)) // Emoji size
                     }
                 }
             }
         }
     }
     }
-    // The bitmap logic stays the same as your previous version
     func drawLetterCell(letter: Character, row: Int, col: Int) -> Bool {
     switch letter {
     case "A":
