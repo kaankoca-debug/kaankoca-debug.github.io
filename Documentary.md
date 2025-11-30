@@ -2157,3 +2157,119 @@
     }
 
 <br>
+
+## Swift Big Idea 3 Code Project
+
+<img src="PHOTO&GIF/Swift-1-BigIdea3_Code-Documentary_AppCopy20.png" width="600">  <img src="PHOTO&GIF/Swift-2-BigIdea3_Code-Documentary_AppCopy20.png" width="600">  <img src="PHOTO&GIF/Swift-3-BigIdea3_Code-Documentary_AppCopy20.png" width="600">
+
+    //30/11/2025
+    import SwiftUI
+    struct ContentView: View {
+    
+    //3.1 Variables and Assignments
+    @State var name = "Kaan"
+    @State var age = 15
+    @State var favoriteColor = "Blue"
+    @State var hobbies = ["Playing the Saxohpone", "FRC", "Watching Netflix"]    //3.10 Lists
+    @State var friends = ["İpek", "Sienna", "Emir"]        //3.10 Lists
+    
+    //3.2 Data Abstraction
+    func printPersonInfo() {
+        // 3.4 Strings
+        print("\(name) is \(age) years old and likes \(favoriteColor).")
+    }
+    
+    func printFriends() {
+        print("My friends are:")
+        
+        //3.8 Iteration
+        for friend in friends {
+            print("- \(friend)")
+        }
+        
+        //3.4 Strings & 3.10 Lists
+        print("I have \(friends.count) friends. My first friend is \(friends[0]).")
+    }
+    
+    func printHobbies() {
+        print("My hobbies are:")
+        
+        //3.8 Iteration
+        for hobby in hobbies {
+            print("- \(hobby)")
+        }
+    }
+    
+    func printLongestHobby() {
+        //3.9 Developing Algorithms
+        var longest = ""
+        
+        //3.8 Iteration & 3.7 Nested Conditionals
+        for hobby in hobbies {
+            if hobby.count > longest.count {
+                longest = hobby
+            }
+        }
+        print("My longest hobby is: \(longest)")
+    }
+    
+    func printMathExpressions() {
+        //3.3 Mathematical Expressions
+        print("Next year I will be \(age + 1) and double my age is \(age * 2).")
+    }
+    
+    func printBooleansAndConditionals() {
+        //3.5 Boolean Expressions
+        let canDrive = age >= 16
+        let lovesBlue = favoriteColor.lowercased() == "blue"
+        
+        print("Can I drive? \(canDrive)")
+        print("Do I love blue? \(lovesBlue)")
+        
+        //3.6 Conditionals
+        if canDrive {
+            print("I am old enough to drive!")
+        } else {
+            print("I am too young to drive.")
+        }
+        
+        //3.7 Nested Conditionals
+        if lovesBlue {
+            if age >= 18 {
+                print("Blue is my favorite color and I am an adult!")
+            } else {
+                print("Blue is my favorite color but I am not an adult yet.")
+            }
+        } else {
+            if age >= 18 {
+                print("I like another color and I am an adult.")
+            } else {
+                print("I like another color and I am not an adult yet.")
+            }
+        }
+    }
+    
+    //3.2 Data Abstraction
+    func runProgram() {
+        print("Welcome to my mini program!")
+        //Calling all functions
+        printPersonInfo()
+        printMathExpressions()
+        printBooleansAndConditionals()
+        printHobbies()
+        printLongestHobby()
+        printFriends()
+    }
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Text(" My Mini CSP Program")
+                .font(.title)
+                .bold()
+            
+            Button("Run Program") {
+                runProgram()
+            }
+        }
+    }
+    }
