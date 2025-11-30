@@ -154,3 +154,8 @@ I would like to explore the idea of creating music by adding up different audio 
 <img src="PHOTO&GIF/Swift-1-PixelArt-Projects_AppCopy18.png" width="600"> 
 
 <br>
+
+## [Swift Big Idea 3 Code Project](https://github.com/kaankoca-debug/kaankoca-debug.github.io/blob/main/Projects/Swift/My%20App%20copy%2020.swiftpm.zip)
+<img src="PHOTO&GIF/Swift-1-BigIdea3_Code-Project_AppCopy20.png" width="600"> 
+
+<br>
