@@ -298,14 +298,29 @@ Some letters, like Y, didn’t look right at first. I fixed them by checking eac
 
 ## [Figma Mood Mixer App Design]()
 **Collaboration:**
-I worked on this project alone. Doing it by myself let me explore my own ideas and make design choices freely.
+I worked on this project **alone**. Doing it by myself let me explore my own ideas and make design choices freely.
 
 **Program Function and Purpose:**
-The project was purely visual. I designed an app interface to practice layout, colors, and usability. The goal was to get comfortable with Figma and improve my design thinking.
+The project was **purely visual**. I designed an **app interface** to practice layout, colors, and usability. The goal was to get comfortable with **Figma** and improve my design thinking.
 
 **Program Design and Development:**
-I experimented with different layouts, buttons, and colors. By arranging elements and trying multiple ideas, I learned how to create clear and attractive designs.
+I experimented with different **layouts, buttons, and colors**. By arranging elements and trying multiple ideas, I learned how to create clear and attractive designs.
 
 **Identifying and Correcting Errors:**
-I had problems with the colorings and the spacings. Then I fixed them by testing the design over and over again. 
+I had problems with the **colorings and the spacings**. Then I fixed them by testing the design over and over again. 
+
+<br>
+
+## [Figma Mood Mixer App Design]()
+**Collaboration:**
+I worked on this project **alone in Swift Playgrounds**. It might’ve been easier with someone else because I would **only focus on certain parts of the code**, but I still could get everything done on my own.
+
+**Program Function and Purpose:**
+The program is a **simple pixel painter**. The user types a **number between 0–99** in the textfield, and the **square with that number on it turns red** from grey. If the input isn’t a number, it shows a **“wrong input”** message.
+
+**Program Design and Development:**
+The hardest part for me was figuring out how to use **TextFields**. **Before starting the full project**, I practiced by **creating long quizzes for myself with ChatGPT **so I could **understand Swift better**. This project helped me learn more about Swift overall, not just the painter itself.
+
+**Identifying and Correcting Errors:**
+Most of my mistakes came from **using the user input**. I tested the program many times until the number checking and error message worked correctly. After that, everything else was pretty simple. I **learned that I need to use “If let”** to make sure the if works. And if it doesn’t the program still runs. 
 
