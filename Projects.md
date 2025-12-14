@@ -163,3 +163,6 @@ I would like to explore the idea of creating music by adding up different audio 
 <img src="PHOTO&GIF/Swift-1-Robot-Projects_AppCopy23.png" width="600"> 
 
 <br>
+
+## [Mood Mixer App Design in Figma V2](https://clean-seven-24624713.figma.site/)
+<img src="PHOTO&GIF/Figma-MoodMixer_V2-Projects-.png" width="600"> 
