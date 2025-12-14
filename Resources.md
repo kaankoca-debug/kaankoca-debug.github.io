@@ -47,3 +47,7 @@
 ## [Swift My Initials With Code Tutorial](https://drive.google.com/file/d/11bHU4Xg-sVjuwtGlDafHP6IYAjMvhN3s/view?usp=drive_link)
 
 ## [Swift Big Idea 3 Code Program Tutorial](https://drive.google.com/file/d/1nCv9xStddKqqvCsC7XxzycFPH8Yte6qi/view?usp=drive_link)
+
+## [Swift Pixel Art Project Tutorial Video](https://drive.google.com/file/d/1FN5qiRwtnwuE2CC2oINSIqDLmauFYxYV/view?usp=sharing)
+
+## [Swift Robot Program Tutorial Video](https://drive.google.com/file/d/1QfU1wTH0378HcEXqhjFPJ4FrAQXHzyeJ/view?usp=sharing)
