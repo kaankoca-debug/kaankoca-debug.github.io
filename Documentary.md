@@ -2273,3 +2273,109 @@
         }
     }
     }
+
+<br>
+
+## Swift Robot Program
+
+<img src="PHOTO&GIF/Swift-1-Robot-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-2-Robot-Documentary.png" width="600">  <img src="PHOTO&GIF/Swift-3-Robot-Documentary.png" width="600">
+   
+    //12/12/2025
+    import SwiftUI
+    struct ContentView: View {
+
+    @State var xOffset: CGFloat = 0
+    @State var yOffset: CGFloat = 0
+    //These are the variables for the x and y axis values of the robot. 
+    @State var robotColor: Color = .indigo
+    //This is the starting color of the robot. 
+    let directions = ["up", "down", "left", "right"]
+    //This is the list that the robot uses to change its direction. 
+    let colors = [Color.yellow, Color.green, Color.indigo, Color.orange]
+    //This is the list that the robot uses to change its color. 
+
+    
+    func moveUp() {
+        yOffset -= 20
+    }
+    
+    func moveDown() {
+        yOffset += 20
+    }
+    
+    func moveLeft() {
+        xOffset -= 20
+    }
+    
+    func moveRight() {
+        xOffset += 20
+    }
+    //These are the functions for all the directions in the program. For left and right the x axis changes and for up and down the y axis changes. 
+
+    
+    func performMove(direction: String) {
+            for i in 0..<directions.count {
+                if direction == directions[i] {
+                    robotColor = colors[i]
+                }
+            //The direction list is used to change the direction of the robot. 
+            //Also the color list is used to change the color of the robot. 
+            }
+            if direction == "up" {
+                moveUp()
+            }
+            else if direction == "down" {
+                moveDown()
+            }
+            else if direction == "left" {
+                moveLeft()
+            }
+            else if direction == "right" {
+                moveRight()
+                //When the direction is up it goes up, when its down it goes down, when its left it goes left, when its right it goes right. 
+            }
+        }
+
+    
+    
+    func startPoint(xOffset:CGFloat, yOffset:CGFloat){
+        if xOffset == 0 && yOffset == 0{
+            print("Start Point")
+            //When the x and y axis is both 0 then the messsage "Start Point" is printed. 
+        }
+    }
+    
+    
+    
+    var body: some View {
+        VStack(spacing: 20) {
+            Circle()
+                .foregroundColor(robotColor)
+                .frame(width: 40, height: 40)
+                .offset(x: xOffset, y: yOffset)
+            //This is the robot. The axis values are the variables xOffset and yOffset. 
+            
+            VStack {
+                Button("⬆️") {
+                    performMove(direction: "up")
+                    startPoint(xOffset:xOffset, yOffset:yOffset)
+                }
+                HStack {
+                    Button("⬅️") {
+                        performMove(direction: "left")
+                        startPoint(xOffset:xOffset, yOffset:yOffset)
+                    }
+                    Button("➡️") {
+                        performMove(direction: "right")
+                        startPoint(xOffset:xOffset, yOffset:yOffset)
+                    }
+                }
+                Button("⬇️") {
+                    performMove(direction: "down")
+                    startPoint(xOffset:xOffset, yOffset:yOffset)
+                }
+                //These buttons all perform an action according to where the arrow points. Upwards arrow - up, downwards arrow - down, leftwards arrow - left, rightwards arrow - right.  
+            }
+        }
+    }
+    }
