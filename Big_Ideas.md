@@ -311,7 +311,7 @@ I had problems with the **colorings and the spacings**. Then I fixed them by tes
 
 <br>
 
-## [Figma Mood Mixer App Design]()
+## [Swift Pixel Art Project]()
 **Collaboration:**
 I worked on this project **alone in Swift Playgrounds**. It might’ve been easier with someone else because I would **only focus on certain parts of the code**, but I still could get everything done on my own.
 
@@ -324,3 +324,18 @@ The hardest part for me was figuring out how to use **TextFields**. **Before sta
 **Identifying and Correcting Errors:**
 Most of my mistakes came from **using the user input**. I tested the program many times until the number checking and error message worked correctly. After that, everything else was pretty simple. I **learned that I need to use “If let”** to make sure the if works. And if it doesn’t the program still runs. 
 
+
+<br>
+
+## [Swift Robot Program]()
+**Collaboration:**
+I worked on this project **alone in Swift Playgrounds**. It could have been a lot easier with someone else because I would  **focus on certain parts of the code**, but I still got everything done on my own quickly.
+
+**Program Function and Purpose:**
+The program is basically a game where there is a **circle and 4 buttons:⬅️, ➡️, ⬆️, ⬇️.** When you press these buttons the robot walks on **the direction of the button you pressed** while **changing its color** for every different direction. Also there is a function that creates the **message "start point"** when the robot comes back to where it started. 
+
+**Program Design and Development:**
+I used lists, functions and conditionals. I think it was a basic program. I used the lists to store the directions and the colors. I used the funcitons for the moves of the robot, the start point message and the program moves being performed as a whole. 
+
+**Identifying and Correcting Errors:**
+I learned so much about **CGFloat** and the **pharanthesis after the function name**. For example I had a hard time to figure out what to write in here **startPoint(xOffset:, yOffset:)**. Then I figured out I had to write **startPoint(xOffset:xOffset, yOffset:yOffset)**. 
