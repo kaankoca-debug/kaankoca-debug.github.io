@@ -328,8 +328,7 @@ Note: Sometimes data sizes may exceed the range of what the computer can handle.
 <br> <br>
 
 # **Unit 3: Algorithms and Programming**
-[Unit 3 Tutorial Video](https://drive.google.com/file/d/1rc4zCoxNbSTyCmlCWeWOZFZx5Ep75mOa/view?usp=sharing)
-
+[Unit 3 Tutorial Video](https://drive.google.com/file/d/1rc4zCoxNbSTyCmlCWeWOZFZx5Ep75mOa/view?usp=sharing) | [Unit 3 Tutorial Video Part 2](https://drive.google.com/file/d/1MX6RoSCVRPETl2RdK3-CFuptkbeqEA5u/view?usp=sharing)
 ## **Variables and assignments:**
 
 The purpose of a program is to manipulate information in many forms.
