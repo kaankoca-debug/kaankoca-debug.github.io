@@ -666,3 +666,53 @@ Creates a new list that contains the values: value1, value2, value3, and ….
 
 - Removes the item at index i in aList and shifts to the left any values at indices greater than i. The length of aList is decreased by 1. 
 - In this example I removed a value from aList.
+
+## **Binary Search:**
+Binary search is one of the searching types in coding when the list or array values that are numbers are in proper order. 
+	
+**NO ORDER = NO BINARY SEARCH**
+
+**Example:**
+
+      let userID: [Int] = [2, 5, 8, 12, 16, 23, 29, 34, 49, 58, 68, 74, 93]
+      let target: Int = 74
+      func search(_ array:[Int], _ target:Int) -> Int {
+    var start: Int = 0
+    var end: Int = array.count - 1
+    var mid: Int = (start+end)/2
+    
+    while true{
+        if array[mid] == target{
+            return mid
+        }
+        else if array[mid] < target{
+            start = mid + 1
+        }
+        else if array[mid] > target{
+            end = mid - 1
+        }
+        mid = (start+end)/2
+          }
+      }
+      print(search(userID, target))
+
+In this example of a program that does binary search the target is 74. The function search first creates a start and end value which is then used to find the mid value which is the midpoint of the start and the end. Then if the midpoint value of the array is equal to the target then the target has been found. But if the value is higher, then the lower parts are deleted by adding 1 to the midpoint and equaling it as the new start. If the target value is lower than the midpoint value, the mid is decreased by 1 and the new end value becomes this. 
+
+## **Calling Procedures**
+Some procedures need some input values to be entered when they are called. So while calling procedures you need to enter the needed values for the function to work. Some procedures need strings, some need integers. It changes with the procedure. 
+
+**WRONG DATA TYPE ENTERED WHILE CALLING A FUNCTION = ERROR**
+      
+**Example:**
+
+      let userID: [Int] = [2, 5, 8, 12, 16, 23, 29, 34, 49, 58, 68, 74, 93]
+      let target: Int = 74
+      func search(_ array:[Int], _ target:Int) -> Int {
+      ...
+          }
+      }
+      print(search(userID, target))
+
+In this example there is a function named search. This function asks for an “array” which can consist of integer values because of the [Int] and a “target” value which too can be an integer only. After the function has been called, an integer value can be an output because of the -> Int. 
+
+When we move to the calling part of the function which was print(search(userID, target)). There is no need to write like array:aaaa or target:bbbb because I used _ and _ while creating the function at the start so the user can only write aaaa or bbbb. 
