@@ -339,3 +339,20 @@ I used lists, functions and conditionals. I think it was a basic program. I used
 
 **Identifying and Correcting Errors:**
 I learned so much about **CGFloat** and the **pharanthesis after the function name**. For example I had a hard time to figure out what to write in here **startPoint(xOffset:, yOffset:)**. Then I figured out I had to write **startPoint(xOffset:xOffset, yOffset:yOffset)**. 
+
+<br>
+
+## [Swift Rock Paper Scissors Program]()
+**Collaboration:**
+I worked on this project **alone**. Doing it by myself helped me focus on understanding game logic and random selection in Swift without any **distractions** from others.
+
+**Program Function and Purpose:**
+The program is a **simple rock-paper-scissor game**. The **computer randomly picks** one option and compares it to the user's fixed choice. Then **it prints whether** the **user wins, loses, or ties**. Its purpose is to practice using randomization and conditional logic in Swift.
+
+**Program Design and Development:**
+I created a **list with the three choices** and used **randomElement** to let the computer pick randomly. Then I wrote all **possible outcomes** using **if-else statements** to compare the choices. The logic was tricky at first because I needed to cover all **win/loss combinations** correctly.
+
+**Identifying and Correcting Errors:**
+My main problem was with **variable scope**. I **kept declaring new winner variables inside each if block instead of reassigning the same one**, so the program **always printed "Tie."** After fixing the scope issue by declaring winner once at the top, the program worked correctly and showed the right results.
+
+<br>
