@@ -51,3 +51,5 @@
 ## [Swift Pixel Art Project Tutorial Video](https://drive.google.com/file/d/1FN5qiRwtnwuE2CC2oINSIqDLmauFYxYV/view?usp=sharing)
 
 ## [Swift Robot Program Tutorial Video](https://drive.google.com/file/d/1QfU1wTH0378HcEXqhjFPJ4FrAQXHzyeJ/view?usp=sharing)
+
+## [Swift Rock Paper Scissors Tutorial](https://drive.google.com/file/d/1DD7IUsbvhr3QfT-qkZcH2mnsdiIJ5XkI/view?usp=sharing)
