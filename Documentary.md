@@ -2379,3 +2379,49 @@
         }
     }
     }
+
+<br>
+
+## Swift Rock Paper Scissors Program
+
+<img src="PHOTO&GIF/Swift-1-RockPaperScissors-Projects_Documentary_PlaygroundCopy_4.png" width="600">
+
+    //16/02/2026
+    func final(){
+        let gameList = ["rock", "paper", "scissor"]
+    //The list to choose choices from. 
+    var choice = gameList[0]
+    //A fix choice from the user. 
+    var randomChoice = gameList.randomElement()
+    //The code that uses randomization.
+    var winner = "Tie"
+    //At start there is considered to be a tie. 
+    if randomChoice == choice{
+         winner = "Tie"
+        //If the choices are the same then there is a tie. 
+    }
+    else if randomChoice == gameList[0] && choice == gameList[1]{
+         winner = "You Win!"
+    }
+    else if randomChoice == gameList[1] && choice == gameList[2]{
+         winner = "You Win!"
+    }
+    else if randomChoice == gameList[2] && choice == gameList[0]{
+         winner = "You Win!" 
+    }
+    else if choice == gameList[0] && randomChoice == gameList[1]{
+         winner = "Computer Wins!"
+    }
+    else if choice == gameList[1] && randomChoice == gameList[2]{
+         winner = "Computer Wins!"
+    }
+    else if choice == gameList[2] && randomChoice == gameList[0]{
+         winner = "Computer Wins!" 
+    }
+    //I wrote the possible outcomes and labeled them weather the computer or the human wins. 
+    print(winner)
+    //Then the winner is printed out.
+    }
+    final()
+    //The function is called.
+
