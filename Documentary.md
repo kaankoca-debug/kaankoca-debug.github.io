@@ -2425,3 +2425,1298 @@
     final()
     //The function is called.
 
+<br>
+
+## Swift AP Computer Science Principles Final Project: Bun n Barrel
+
+<img src="PHOTO&GIF/Swift-1-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-2-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-3-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-4-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-5-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-6-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-7-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-8-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-9-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-10-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-11-Final-Documentary_AppCopy27.png" width="600"> <img src="PHOTO&GIF/Swift-12-Final-Documentary_AppCopy27.png" width="600">
+
+    //01/03/2026
+    import SwiftUI
+
+    struct ContentView: View {
+    @State var screen = "main"
+    //I use a screen variable to navigate between different pages of the app.
+    
+    @State var hamburgerList = [0, 0, 0, 0]
+    let priceHamburger = 10
+    @State var hotDogList = [0, 0, 0, 0]
+    let priceHotDog = 6
+    @State var menuList = [0, 0, 0, 0]
+    let priceMenu1 = 22
+    let priceMenu2 = 24
+    let priceMenu3 = 20
+    let priceMenu4 = 250
+    @State var friesList = [0, 0]
+    let priceFries = 4
+    @State var drinkList = [0]
+    let priceDrink = 2
+    //I create a list for each food catagory to keep track of how many of each item the user orders.
+    //I also create a price constant for each item.
+    
+    @State var checkList = [""]
+    //This list will hold the final order summary lines to show on the check screen.
+    
+    @State var enteredCode = ""
+    @State var type = "eatIn"
+    @State var totalPrice = 0
+    //I keep track of the discount code the user enters, the dining type, and the total price.
+    
+    @State var discount = false
+    let discountCode = "discountCSP2026"
+    //I store the correct discount code and a boolean to track if the user has applied it.
+    
+    func runCheck(){
+        checkList = []
+        if hamburgerList[0] > 0 { checkList.append("Classic Burger: \(hamburgerList[0])x - \(hamburgerList[0]*priceHamburger) dollar") }
+        if hamburgerList[1] > 0 { checkList.append("Cheeseburger: \(hamburgerList[1])x - \(hamburgerList[1]*priceHamburger) dollar") }
+        if hamburgerList[2] > 0 { checkList.append("Smash Burger: \(hamburgerList[2])x - \(hamburgerList[2]*priceHamburger) dollar") }
+        if hamburgerList[3] > 0 { checkList.append("Veggie Burger: \(hamburgerList[3])x - \(hamburgerList[3]*priceHamburger) dollar") }
+        if hotDogList[0] > 0 { checkList.append("Classic Hot Dog: \(hotDogList[0])x - \(hotDogList[0]*priceHotDog) dollar") }
+        if hotDogList[1] > 0 { checkList.append("Corn Dog: \(hotDogList[1])x - \(hotDogList[1]*priceHotDog) dollar") }
+        if hotDogList[2] > 0 { checkList.append("New York Style: \(hotDogList[2])x - \(hotDogList[2]*priceHotDog) dollar") }
+        if hotDogList[3] > 0 { checkList.append("Chicago Dog: \(hotDogList[3])x - \(hotDogList[3]*priceHotDog) dollar") }
+        if menuList[0] > 0 { checkList.append("Classic Menu: \(menuList[0])x - \(menuList[0]*priceMenu1) dollar") }
+        if menuList[1] > 0 { checkList.append("Old School Menu: \(menuList[1])x - \(menuList[1]*priceMenu2) dollar") }
+        if menuList[2] > 0 { checkList.append("Vegan Menu: \(menuList[2])x - \(menuList[2]*priceMenu3) dollar") }
+        if menuList[3] > 0 { checkList.append("Party Menu: \(menuList[3])x - \(menuList[3]*priceMenu4) dollar") }
+        if friesList[0] > 0 { checkList.append("Fries: \(friesList[0])x - \(friesList[0]*priceFries) dollar") }
+        if friesList[1] > 0 { checkList.append("Cheese Fries: \(friesList[1])x - \(friesList[1]*priceFries) dollar") }
+        if drinkList[0] > 0 { checkList.append("Drink: \(drinkList[0])x - \(drinkList[0]*priceDrink) dollar") }
+    }
+    //This function builds the checkList. It checks each item and if the quantity is more than 0 it adds that item to the list with its quantity and price.
+    
+    func runPrice(){
+        totalPrice = ((hamburgerList[0]+hamburgerList[1]+hamburgerList[2]+hamburgerList[3])*priceHamburger)+((hotDogList[0]+hotDogList[1]+hotDogList[2]+hotDogList[3])*priceHotDog)+(menuList[0]*priceMenu1)+(menuList[1]*priceMenu2)+(menuList[2]*priceMenu3)+(menuList[3]*priceMenu4)+((friesList[0]+friesList[1])*priceFries)+drinkList[0]*priceDrink
+        
+        if discount == true{
+            totalPrice -= totalPrice/5
+        }
+    }
+    //This function calculates the total price by multiplying each items quantity by its price and adding them all together.
+    //If the discount is applied it removes 20% from the total.
+    
+    var body: some View {
+        if screen == "main"{
+            ZStack{
+                Color.indigo
+                    .opacity(0.3)
+                
+                VStack {
+                    Text("Welcome to Bun n Barrel 🍽️")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -400)
+                        .foregroundStyle(.brown)
+                    //This is the first screen the user sees when they open the app.
+                    
+                    Button("Take Away 📦") {
+                        type = "takeAway"
+                        screen = "eat in/takeAway"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.red)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    //This button sets the type to takeAway and sends the user to the eat in/takeAway screen.
+                    
+                    Button("Eat In 🍴") {
+                        type = "eatIn"
+                        screen = "eat in/takeAway"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.brown)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    //This button sets the type to eatIn and sends the user to the eat in/takeAway screen.
+                }
+            }
+        }
+        
+        else if screen == "eat in/takeAway"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("Create Your Dining Experience")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -250)
+                        .foregroundStyle(.brown)
+                    //This is the main ordering screen where the user chooses which food category to go into.
+                    
+                    Button("Hamburgers 🍔"){
+                        screen = "hamburger"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.red)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    //This button sends the user to the hamburger screen.
+                    
+                    Button("Hot Dogs 🌭"){
+                        screen = "hotDog"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.brown)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    //This button sends the user to the hot dog screen.
+                    
+                    Button("Menus 💥"){
+                        screen = "menus"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.red)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    //This button sends the user to the menus screen.
+                    
+                    Button("Fries 🍟"){
+                        screen = "fries"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.brown)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    //This button sends the user to the fries screen.
+                    
+                    Button("Drinks 🥤"){
+                        screen = "drinks"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.red)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    //This button sends the user to the drinks screen.
+                    
+                    Button("Discount Code 🔱"){
+                        screen = "discount"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.brown)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    //This button sends the user to the discount screen.
+                    
+                    HStack{
+                        Button("Back") {
+                            screen = "main"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The back button sends the user back to the main screen.
+                        
+                        Button("My Basket") {
+                            runCheck()
+                            runPrice()
+                            screen = "checkScreen"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The my basket button calls runCheck and runPrice and then sends the user to the check screen.
+                    }
+                }
+            }
+        }
+        else if screen == "hamburger"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("Hamburgers 🍔")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -250)
+                        .foregroundStyle(.brown)
+                    //This is the hamburger screen. The user can add or remove each burger using the + and - buttons.
+                    
+                    HStack {
+                        Button("Classic Burger"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            hamburgerList[0] += 1
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Classic Burger count by 1.
+                        
+                        Button ("-"){
+                            if hamburgerList[0] > 0{
+                                hamburgerList[0] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(hamburgerList[0])"){
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Classic Burgers.
+                    }
+                    
+                    HStack {
+                        Button("Cheeseburger"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            hamburgerList[1] += 1
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Cheeseburger count by 1.
+                        
+                        Button ("-"){
+                            if hamburgerList[1] > 0{
+                                hamburgerList[1] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(hamburgerList[1])"){
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Cheeseburgers.
+                    }
+                    
+                    HStack {
+                        Button("Smash Burger"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            hamburgerList[2] += 1
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Smash Burger count by 1.
+                        
+                        Button ("-"){
+                            if hamburgerList[2] > 0{
+                                hamburgerList[2] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(hamburgerList[2])"){
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Smash Burgers.
+                    }
+                    
+                    HStack {
+                        Button("Veggie Burger"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            hamburgerList[3] += 1
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Veggie Burger count by 1.
+                        
+                        Button ("-"){
+                            if hamburgerList[3] > 0{
+                                hamburgerList[3] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(hamburgerList[3])"){
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Veggie Burgers.
+                    }
+                    
+                    HStack{
+                        Button("Back") {
+                            screen = "eat in/takeAway"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The back button sends the user back to the eat in/takeAway screen.
+                        
+                        Button("My Basket") {
+                            runCheck()
+                            runPrice()
+                            screen = "checkScreen"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The my basket button calls runCheck and runPrice and then sends the user to the check screen.
+                    }
+                }
+            }
+        }
+        else if screen == "hotDog"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("Hot Dogs 🌭")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -250)
+                        .foregroundStyle(.brown)
+                    //This is the hot dog screen. The user can add or remove each hot dog using the + and - buttons.
+                    
+                    HStack {
+                        Button("Classic Hot Dog"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            hotDogList[0] += 1
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Classic Hot Dog count by 1.
+                        
+                        Button ("-"){
+                            if hotDogList[0] > 0{
+                                hotDogList[0] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(hotDogList[0])"){
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Classic Hot Dogs.
+                    }
+                    
+                    HStack {
+                        Button("Corn Dog"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            hotDogList[1] += 1
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Corn Dog count by 1.
+                        
+                        Button ("-"){
+                            if hotDogList[1] > 0{
+                                hotDogList[1] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(hotDogList[1])"){
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Corn Dogs.
+                    }
+                    
+                    HStack {
+                        Button("New York Style"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            hotDogList[2] += 1
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the New York Style count by 1.
+                        
+                        Button ("-"){
+                            if hotDogList[2] > 0{
+                                hotDogList[2] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(hotDogList[2])"){
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of New York Style Hot Dogs.
+                    }
+                    
+                    HStack {
+                        Button("Chicago Dog"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            hotDogList[3] += 1
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Chicago Dog count by 1.
+                        
+                        Button ("-"){
+                            if hotDogList[3] > 0{
+                                hotDogList[3] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(hotDogList[3])"){
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Chicago Dogs.
+                    }
+                    
+                    HStack{
+                        Button("Back") {
+                            screen = "eat in/takeAway"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The back button sends the user back to the eat in/takeAway screen.
+                        
+                        Button("My Basket") {
+                            runCheck()
+                            runPrice()
+                            screen = "checkScreen"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The my basket button calls runCheck and runPrice and then sends the user to the check screen.
+                    }
+                }
+            }
+        }
+        else if screen == "menus"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("Menus 💥")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -250)
+                        .foregroundStyle(.brown)
+                    //This is the menus screen where the user can order bundle deals instead of individual items.
+                    
+                    HStack {
+                        Button("Classic Menu"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            menuList[0] += 1
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Classic Menu count by 1.
+                        
+                        Button ("-"){
+                            if menuList[0] > 0{
+                                menuList[0] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(menuList[0])"){
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Classic Menus.
+                    }
+                    
+                    Text("2 Classic Burgers")
+                        .bold()
+                    Text("1 Classic Hot Dog")
+                        .bold()
+                    Text("2 Fries")
+                        .bold()
+                    Text("2 Drinks")
+                        .bold()
+                    //These lines show what is inside the Classic Menu.
+                    
+                    HStack {
+                        Button("Old School Menu"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            menuList[1] += 1
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Old School Menu count by 1.
+                        
+                        Button ("-"){
+                            if menuList[1] > 0{
+                                menuList[1] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(menuList[1])"){
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Old School Menus.
+                    }
+                    
+                    Text("2 Smash Burgers")
+                        .bold()
+                    Text("1 NY Style Hot Dog")
+                        .bold()
+                    Text("2 Cheese Fries")
+                        .bold()
+                    Text("2 Drinks")
+                        .bold()
+                    //These lines show what is inside the Old School Menu.
+                    
+                    HStack {
+                        Button("Vegan Menu"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            menuList[2] += 1
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Vegan Menu count by 1.
+                        
+                        Button ("-"){
+                            if menuList[2] > 0{
+                                menuList[2] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(menuList[2])"){
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Vegan Menus.
+                    }
+                    
+                    Text("2 Veggie Burgers")
+                        .bold()
+                    Text("2 Fries")
+                        .bold()
+                    Text("2 Drinks")
+                        .bold()
+                    //These lines show what is inside the Vegan Menu.
+                    
+                    HStack {
+                        Button("Party Menu"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            menuList[3] += 1
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Party Menu count by 1.
+                        
+                        Button ("-"){
+                            if menuList[3] > 0{
+                                menuList[3] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(menuList[3])"){
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Party Menus.
+                    }
+                    
+                    Text("10 Smash Burgers")
+                        .bold()
+                    Text("10 Smash Burgers")
+                        .bold()
+                    Text("10 Chicago Dogs")
+                        .bold()
+                    Text("12 Cheese Fries")
+                        .bold()
+                    Text("8 Fries")
+                        .bold()
+                    Text("20 Drinks")
+                        .bold()
+                    //These lines show what is inside the Party Menu.
+                    
+                    HStack{
+                        Button("Back") {
+                            screen = "eat in/takeAway"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The back button sends the user back to the eat in/takeAway screen.
+                        
+                        Button("My Basket") {
+                            runCheck()
+                            runPrice()
+                            screen = "checkScreen"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The my basket button calls runCheck and runPrice and then sends the user to the check screen.
+                    }
+                }
+            }
+        }
+        else if screen == "fries"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("Fries 🍟")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -250)
+                        .foregroundStyle(.brown)
+                    //This is the fries screen. The user can add or remove fries using the + and - buttons.
+                    
+                    HStack {
+                        Button("Fries"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            friesList[0] += 1
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Fries count by 1.
+                        
+                        Button ("-"){
+                            if friesList[0] > 0{
+                                friesList[0] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(friesList[0])"){
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Fries.
+                    }
+                    
+                    HStack {
+                        Button("Cheese Fries"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            friesList[1] += 1
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Cheese Fries count by 1.
+                        
+                        Button ("-"){
+                            if friesList[1] > 0{
+                                friesList[1] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(friesList[1])"){
+                        }
+                        .padding()
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Cheese Fries.
+                    }
+                    
+                    HStack{
+                        Button("Back") {
+                            screen = "eat in/takeAway"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The back button sends the user back to the eat in/takeAway screen.
+                        
+                        Button("My Basket") {
+                            runCheck()
+                            runPrice()
+                            screen = "checkScreen"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The my basket button calls runCheck and runPrice and then sends the user to the check screen.
+                    }
+                }
+            }
+        }
+        else if screen == "drinks"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("Drinks 🥤")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -250)
+                        .foregroundStyle(.brown)
+                    //This is the drinks screen. The user can add or remove drinks using the + and - buttons.
+                    
+                    HStack {
+                        Button("Drink"){
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button ("+"){
+                            drinkList[0] += 1
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The + button increases the Drink count by 1.
+                        
+                        Button ("-"){
+                            if drinkList[0] > 0{
+                                drinkList[0] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //The - button decreases the count by 1 but only if it is above 0 so it never goes negative.
+                        
+                        Button ("\(drinkList[0])"){
+                        }
+                        .padding()
+                        .background(.red)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //This button displays the current quantity of Drinks.
+                    }
+                    
+                    HStack{
+                        Button("Back") {
+                            screen = "eat in/takeAway"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The back button sends the user back to the eat in/takeAway screen.
+                        
+                        Button("My Basket") {
+                            runCheck()
+                            runPrice()
+                            screen = "checkScreen"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The my basket button calls runCheck and runPrice and then sends the user to the check screen.
+                    }
+                }
+            }
+        }
+        else if screen == "discount"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("Discount Code 🔱")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -250)
+                        .foregroundStyle(.brown)
+                    //This is the discount screen where the user can enter a discount code to get 20% off.
+                    
+                    HStack {
+                        TextField("Enter a discount code", text: $enteredCode)
+                            .frame(width: 200)
+                        //The user types their discount code into this text field.
+                        
+                        Button("OK"){
+                            if discountCode == enteredCode{
+                                discount = true
+                                screen = "discountSuccess"
+                            }
+                            else{
+                                screen = "discountFail"
+                            }
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //When OK is pressed I compare what the user typed with the correct code. If it matches I set discount to true and send them to the discountSuccess screen. If it doesnt match I send them to the discountFail screen.
+                    }
+                    
+                    HStack{
+                        Button("Back") {
+                            screen = "eat in/takeAway"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The back button sends the user back to the eat in/takeAway screen without applying any discount.
+                        
+                        Button("My Basket") {
+                            runCheck()
+                            runPrice()
+                            screen = "checkScreen"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The my basket button calls runCheck and runPrice and then sends the user to the check screen.
+                    }
+                }
+            }
+        }
+        else if screen == "discountSuccess"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("✅ Discount Code is Correct ✅")
+                        .font(.title)
+                        .bold()
+                        .foregroundStyle(.brown)
+                    //This screen appears when the user enters the correct discount code. The discount variable is now true so 20% will be taken off on the check screen.
+                    
+                    HStack{
+                        Button("Back") {
+                            screen = "eat in/takeAway"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The back button sends the user back to the eat in/takeAway screen so they can continue ordering.
+                        
+                        Button("My Basket") {
+                            runCheck()
+                            runPrice()
+                            screen = "checkScreen"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The my basket button calls runCheck and runPrice and then sends the user to the check screen. The discount will already be applied.
+                    }
+                }
+            }
+        }
+        else if screen == "discountFail"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("❌ Discount Code is Incorrect ❌")
+                        .font(.title)
+                        .bold()
+                        .foregroundStyle(.brown)
+                    
+                    Text("Try Again Please")
+                        .font(.title)
+                        .bold()
+                        .foregroundStyle(.brown)
+                    //This screen appears when the user enters the wrong discount code.
+                    
+                    HStack{
+                        Button("Back") {
+                            screen = "discount"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The back button here sends the user back to the discount screen not the eat in/takeAway screen, so they can try entering the code again.
+                        
+                        Button("My Basket") {
+                            runCheck()
+                            runPrice()
+                            screen = "checkScreen"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        //The my basket button calls runCheck and runPrice and then sends the user to the check screen.
+                    }
+                }
+            }
+        }
+        else if screen == "checkScreen"{
+            ZStack{
+                Color.blue
+                    .opacity(0.3)
+                
+                VStack{
+                    Text("Your Check")
+                        .font(.title)
+                        .bold()
+                        .foregroundStyle(.brown)
+                    //This is the check screen where the user can see everything they ordered.
+                    
+                    ForEach(checkList, id: \.self) { item in
+                        Text(item)
+                            .bold()
+                            .foregroundStyle(.brown)
+                    }
+                    //I use a ForEach to loop through the checkList and display every item the user ordered with its quantity and price.
+                    
+                    if discount == true{
+                        Text("%20 Discount")
+                            .bold()
+                            .foregroundStyle(.indigo)
+                    }
+                    //If the discount was applied I show it on the receit so the user knows they got the discount.
+                    
+                    Text("Total Price: \(totalPrice) dollar")
+                        .bold()
+                        .foregroundStyle(.green)
+                    //The final total price is shown here. If the discount was applied it is already calculated into this number.
+                    
+                    Text("🧡 Thank you for dining at Bun n Barrel 🧡")
+                        .bold()
+                        .foregroundStyle(.brown)
+                    
+                    Button("Back") {
+                        screen = "eat in/takeAway"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.indigo)
+                    .foregroundStyle(.white)
+                    .cornerRadius(15)
+                    .bold()
+                    //The back button sends the user back to the eat in/takeAway screen in case they want to change their order.
+                }
+            }
+        }
+    }
+    }
