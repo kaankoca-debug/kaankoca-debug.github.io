@@ -1723,6 +1723,127 @@
     }
     }
 
+
+<br>
+
+## Swift WWDC Student Design Competition
+
+<img src="PHOTO&GIF/Swift-1-WWDC-Documentary_AppCopy29.png" width="600"> <img src="PHOTO&GIF/Swift-2-WWDC-Documentary_AppCopy29.png" width="600"> <img src="PHOTO&GIF/Swift-3-WWDC-Documentary_AppCopy29.png" width="600">
+
+    //22/11/2025
+    import SwiftUI
+
+    struct ContentView: View {
+    @State var screen = "welcome"
+    @State var score = 0
+    //I create a score variable to keep track of the correct answers. 
+    @State var question = 0
+    //The index for the first question. 
+    
+    let questions = ["What color is the sky?", "How many legs does a dog have?", "What is 2 + 2?"]
+    //I create a list where the questions are held. 
+    let answers = ["Blue", "4", "4"]
+    //I write the answers in another list. 
+    
+    let choices = [
+        ["Blue", "Red", "Green"],
+        ["2", "4", "6"],
+        ["3", "4", "5"]
+    ]
+    //I create another list to keep the answer choices for each question. 
+    
+    func checkAnswer(picked: String) {
+        if picked == answers[question] {
+            score += 1
+        }
+        if question < questions.count - 1 {
+            question += 1
+        } else {
+            screen = "results"
+        }
+    }
+    //This is the function where the correct answer and incorrect answer is found. 
+    
+    var body: some View {
+        if screen == "welcome" {
+            ZStack {
+                Color.blue.opacity(0.3)
+                VStack {
+                    Text("Trivia App")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundStyle(.brown)
+                    //This is the first screen where you start
+                    
+                    Button("Start") {
+                        screen = "quiz"
+                    }
+                    .padding()
+                    .frame(width: 200)
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    //When the start button is pressed you move on to the quiz screen. 
+                }
+            }
+        }
+        
+        else if screen == "quiz" {
+            ZStack {
+                Color.blue.opacity(0.3)
+                VStack {
+                    Text(questions[question])
+                        .font(.title2)
+                        .bold()
+                        .foregroundStyle(.brown)
+                        .multilineTextAlignment(.center)
+                        .frame(width: 300)
+                    
+                    ForEach(choices[question], id: \.self) { choice in
+                        Button(choice) {
+                            checkAnswer(picked: choice)
+                        }
+                        .padding()
+                        .frame(width: 200)
+                        .background(.brown)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        //With the foreach code every single question is asked and the checkAnswer function is applied to check the answers and the choice is what the user picked out of the choices. 
+                    }
+                }
+            }
+        }
+        
+        else if screen == "results" {
+            ZStack {
+                Color.blue.opacity(0.3)
+                VStack {
+                    Text("Score: \(score) / \(questions.count)")
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundStyle(.brown)
+                    //At last the score variable is printed beside the total question amount. 
+                    
+                    Button("Play Again") {
+                        score = 0
+                        question = 0
+                        screen = "welcome"
+                        //There is a play again button which takes the user to the first screen to do the quiz again. 
+                    }
+                    .padding()
+                    .frame(width: 200)
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                }
+            }
+        }
+    }
+    }
+
 <br>
 
 ## Swift Ice Cream Shop List Project
