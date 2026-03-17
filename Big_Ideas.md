@@ -266,6 +266,21 @@ I had **trouble pushing the second list** to the right side when printing. After
 
 <br>
 
+## [Swift WWDC Student Design Competition Project:]()
+**Collaboration:**
+I worked on this project completely **alone**. I didn't really need a partner for this one because it was short enough to handle by myself. Working alone helped me focus and I finished it pretty quickly. I **didn’t have to consider any different ideas** because I was alone. 
+
+**Program Function and Purpose:** 
+The program is a **simple trivia game with 3 questions**. The user **picks one of the answer choices for each question** and at the end the score is shown out of 3. There is also a **play again button** that resets everything and takes the user back to the first screen. Its purpose is to let the user test their knowledge in a simple and fun way.
+
+**Program Design and Development:**
+I created **3 different lists** and **stored the questions, answers and choices in these lists**. I created a **function** that checked the answers and changed the score accordingly. These parts weren’t hard to write but connecting the lists and the function took me a bit of time. 
+
+**Identifying and Correcting Errors:**
+I **tested the app a few times** to make sure the score was counting correctly and that the play again button was resetting everything. At one point the **score wasn't resetting properly** when I pressed play again but I found the mistake quickly and fixed it. After that everything worked fine.
+
+<br>
+
 ## [Swift Ice Cream List Project:]()
 **Collaboration:**
 I worked on this project **alone**. Doing it by myself helped me **understand lists better** and focus on organizing the information clearly.
@@ -354,5 +369,20 @@ I created a **list with the three choices** and used **randomElement** to let th
 
 **Identifying and Correcting Errors:**
 My main problem was with **variable scope**. I **kept declaring new winner variables inside each if block instead of reassigning the same one**, so the program **always printed "Tie."** After fixing the scope issue by declaring winner once at the top, the program worked correctly and showed the right results.
+
+<br>
+
+## [Swift AP Computer Science Principles Final Project: Bun n Barrel]()
+**Collaboration:**
+I worked on this project **alone**. Doing it by myself helped me focus on my own ideas and practice Swift coding **without any distractions**. I felt confident working alone because I already had some experience with Swift from my previous projects.
+
+**Program Function and Purpose:**
+The program is a **restaurant ordering app**. The user picks between eat in or take away, then goes into different food categories like **hamburgers, hot dogs, menus, fries and drinks**. They can add or remove items with **+ and - buttons** and then **check their basket** to see the total price. There is also a **discount code that removes 20%** from the total if entered correctly.
+
+**Program Design and Development:** 
+I used a **screen variable to navigate between all the pages** of the app. I made lists for each food category to keep track of the quantities and wrote two functions, one to build the order summary and one to calculate the total price. The hardest part was the check function. I had a **problem with automatically updating the items entered** then about the pricing. 
+
+**Identifying and Correcting Errors:**
+The **check screen was a huge problem for me**. It took more time than it took me to write the code for the whole program because it was a logic error. I couldn’t automatically update the items entered by the user. They always had to press the My Basket button to update it. Then I used **@State and created many variables to update automatically**. After this problem I had a **problem with writing every item one by one** while checking if the user ordered those items. I used **ForEach** to solve this problem. 
 
 <br>
