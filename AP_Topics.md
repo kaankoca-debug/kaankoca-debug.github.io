@@ -715,3 +715,358 @@ Some procedures need some input values to be entered when they are called. So wh
 In this example there is a function named search. This function asks for an “array” which can consist of integer values because of the [Int] and a “target” value which too can be an integer only. After the function has been called, an integer value can be an output because of the -> Int. 
 
 When we move to the calling part of the function which was print(search(userID, target)). There is no need to write like array:aaaa or target:bbbb because I used _ and _ while creating the function at the start so the user can only write aaaa or bbbb. 
+
+# **Developing Procedures**
+
+Procedure-named program piece that serves a specific purpose. 
+
+A whole program is created by procedures that have specific functions working together. 
+
+2 types of procedures:
+- Return a value
+- Execute a block of statements
+
+Don’t forget about the robot procedures in the AP CSP questions. 
+
+1. Naming a procedure is important - gives clue about its purpose
+
+2. Think about the parameter
+
+	RotateLeft()
+	MoveForward()
+	RotateRight()
+	MoveForward()
+	MoveForward()
+	RotateRight()
+	MoveForward()
+	RotateLeft()
+
+- THIS IS detourLeft()
+
+
+	MoveForward()
+	RotateLeft()
+	MoveForward()
+
+- THIS IS turnCorner()
+
+
+THIS CODE —>
+
+	RotateLeft()
+	MoveForward()
+	RotateRight()
+	MoveForward()
+	MoveForward()
+	RotateRight()
+	MoveForward()
+	RotateLeft()
+	MoveForward()
+	RotateLeft()
+	MoveForward()
+	MoveForward()
+	MoveForward()
+
+IS EQUAL TO THIS CODE —>
+
+	detourLeft()
+	turnCorner()
+	MoveForward()
+	MoveForward()
+
+This code is shorter, easier to write, easier to debug, uses less space, is better from every perspective. 
+
+
+# **Libraries**
+
+**Library** - A file that has shortened procedures for coders to use to write code more efficiently. 
+
+**API** - It helps with how the procedures from the libraries can be used. The documentation. It simplifies the interactions with an app or a coding language without needing to become an expert of it. 
+
+Libraries are often used to shorten the code, write easier. Cause some codes can be way too long.
+
+You don’t need to know how the procedure you take from the library works. You just have to know how to call it. 
+
+The exam reference sheet for AP CSP (The robot codes) can be an example of a Library. 
+
+# **Random Values**
+
+**Note:** in AP CSP RANDOM(a, b) --> Means numbers from a to b (a&b included)
+
+When you are given two random values and asked about a variables value that is affected by these randoms you need to try both the lowest and the highest values that the random values have and form a range for the last variable. 
+
+**RANGE IS IMPORTANT**
+
+# **Simulations**
+
+Computer simulations can be limited and have bias. They mimic the real world. 
+
+- A simulation will not always have the same result.
+- A simulation has results which aren’t more accurate than an experiment.
+- A simulation can model real-world events that are not practical for experiments.
+- A simulation investigates a phenomenon without real world constraints of time, money or safety. 
+
+Faults in the real world aren’t in the simulations. Like gravity or weight when you are throwing a dice. 
+
+# **Algorithmic Efficiency**
+
+The code is tried to be shortened.
+
+There are different algorithms and the goal of the coder is to use the most efficient, easiest one of them. 
+
+**Example:** Card Sorting
+
+**Algorithm 1**
+
+The first 2 cards are being compared the lower one is put on the left side. Then the second 2 cards are being compared and swapped if the lower card is on the right side. It goes on like this.
+
+**Algorithm 2:**
+
+Every card is looked at and the lowest card is founded, put on the left side. Then the second lowest card is found and put beside the lowest card and it goes on like this. 
+
+The **second algorithm has less comparisons and swaps**. It more efficient, effective, fast, easy. So according to algorithmic efficiency the second algorithm should be picked by the coder. 
+
+**Diff between Exponential and Linear and Factorial:**
+
+**Exponential** - Unreasonable amount of time
+
+**Linear** - Reasonable amount of time
+
+**Factorial** - Unreasonable amount of time
+
+
+**Heuristic** is an approach to a problem that produces a solution that is not guaranteed to always find an optimal solution. 
+
+Heuristics are used when a problem can be solved but would take an unreasonable amount of time. 
+
+# **Undecidable Problems**
+
+There are **2 types of problems**
+- Decidable
+- Undecidable
+
+Undecidable problems don’t have algorithms that always produce a yes or no answer to the problem being faced. 
+
+**Real life examples:**
+- When a website takes too long to open
+- When an app doesn’t open
+
+After a certain time the computer stops trying to solve the problem
+
+# **The Internet**
+It wasn’t practical for computers to work alone. They were capable of sending and receiving data but they didn’t have someplace where they could share data. 
+
+**A packet** - Small amount of data sent over a network. 
+
+Each packet has:
+- A source
+- A destination
+- Information
+
+**A computer network** - A group of interconnected computing devices capable of sending or receiving data. 
+
+**A computer system** - A group of computing devices and programs working together for a joint purpose.
+
+**Packet switching** - The message file is broken to pieces and sent to the receiver without order. 
+
+**Path** - Sequence of directly connected computing devices from sender to receiver. 
+
+**Routing** - The process of finding a path from sender to receiver. 
+
+**Bandwidth** - Max amount of data that can be sent in a fixed amount of time on a computer network. (Bits per second)
+
+**Computer Protocol Models:**
+
+- OSI: The layers you have to go through to communicate 7 groups of protocols.
+- TCP: Establishes a common standart for how to send messages between devices on the internet.
+- IETF: Manages the development of standards and tech discussions about the internet in an open process. 
+
+**Narrow Waist Layers**
+1. Network Access Layer: About the hardware, wifi, wires
+2. Internet Layer: The 1s and the 0s are being transported to the receiver. Metadata contains information of the receiver.
+3. Transport Layer: Open standards enable different developers to build hardware and software to communicate within the internet.
+4. Application Layer: Some are web servers, some are domain name services.
+
+- This is a web server:
+- https://www.mycompany.com
+
+- This is a DNS
+- www.mycompany.com
+
+# **Fault Tolerance**
+Think of 7 cities that have roads to each other like A to B to C to D to E to F to G. If for instance road C-D collapses then A, B, C can’t communicate with other cities. 
+So this example wasn’t fault tolerant. 
+
+Let’s think of these 7 cities in a different way. Every city has roads to every other city. So if the road between C-D collapses every city can still communicate with each other. Because this example is fault tolerant. 
+
+**Note:** The internet is a fault tolerant system. 
+
+With more devices and connections the system only gets more and more strong. It produces new ways to communicate and the fault tolerance increases. The data can communicate from different routes. 
+
+# **Parallel and Distributed Computing**
+Computers have some tasks they need to do. They schedule these tasks. 
+
+1. **Sequential Computing**
+- Computers do the tasks one by one
+- Example: Task A: 10 ms, Task B: 30 ms, Task C: 40 ms
+- Total process time is 10+ 30 + 40 = 80 ms
+- Tasks are independant
+      
+2. **Parallel Computing**
+- The tasks are done simultaneously
+- Hardware driven: Many cores are used to do these tasks at the same time
+- Data driven: Lots of data can be processed in the same way
+- So the tasks are done quicker: Supercomputers link hundreds of CPUs to work fast
+- Example: Task A: 10 ms, Task B: 30 ms, Task C: 40 ms
+- Total Process time is equal to the longest task = 40 ms
+          
+3. **Distributed Computing**
+- Tasks are sent to other computers
+- It runs in the mix of parallel and sequential computing
+- It can be faster or slower than parallel
+- Google web search
+
+# **Beneficial and Harmful Effects**
+Think of a drone
+
+1. **Benefits:** Deliveries, finding lost people, aerial photography
+2. **Harms:** Flying in restricted zones is illegal, privacy concerns
+
+Think of a Wii Controller
+
+1. **Benefits:** Gets people active
+2. **Harms:** Injuries, broken TV
+
+Think of 3D Printers
+
+- They can create parts including themselves.
+- So computing innovations can create themselves or computing innovations. 
+
+**Note:** A computing innovation can have an impact beyond its purpose. 
+
+# **Digital Divide**
+
+**Socioeconomics** - Refer to the total amount of money entered into the households(Some people may not have enough money to afford a computer)
+
+**Geographic** - The place where there is internet connection and where there isn’t(A computer may not connect to the internet at a mountain)
+
+**Demographics** - Include age(you may not have a computer when you are very young), religion(Amish people don’t have cars)…
+
+**Countries** - Every country has different limitations to certain computing innovations.(Computers aren’t common in rural areas)
+
+# **Computing Bias**
+
+Think of Netflix:
+- It takes your information
+    - Name
+    - Address
+    - When you watch
+    - What you watch
+    - What you binge
+    - Style of shows selected 
+- It shows you the Netflix exclusive content
+    - To keep your subscription
+ 
+  
+This computing bias can be a good thing because it guesses what you will pick next to watch. 
+
+**All software can be biased - unintentionally or intentionally**
+
+**Bias should be avoided while coding.**
+
+# **Crowdsourcing**
+**Presentation Link:** file:///Users/kaankoca/Downloads/5.4%20Crowdsourcing.pdf
+
+Crowdsourcing is basically when a large amount of people contribute a small amount of data or ideas or work to solve a specific problem. Also it happens from the internet. Here are some examples of crowdsourcing:
+
+- Wikipedia: Many people write down information and in final long articles are created
+- Google Maps: User traffic reports helps the app to change something wrong
+- Youtube: Users upload their videos and people can have a wide variety of things to watch
+- Yelp: Users write reviews which help other users help decide where to go
+
+**5 Problems That Crowdsourcing Can Solve:**
+- Crowdsourcing can help people to make their minds and decide on a restaurant to go. (Yelp)
+- It can help people to choose a movie out of a group of them. (IMDB)
+- It makes people buy the right product from Amazon or Trendyol because of the reviews. 
+- It helps people to get help on their homeworks by asking questions to people. (eOdev)
+- Choosing the right application by looking at their scores given by people. (App Store)
+
+# **Legal and Ethical Concerns**
+**Presentation Link:** file:///Users/kaankoca/Downloads/5.5%20Legal%20and%20Ethical%20Concerns.pdf
+
+While technology is growing, it makes people think how some things have changed legally and ethically. There are now new responsibilities for people in order to use technology wisely.
+
+**Legal** - Concerns about the law and technology
+
+**Ethical** — what is right or wrong even if it is not illegal
+
+Both of these matter and people should act according to these concerns and responsibilities about them
+
+- Downloading movies or songs from non-original websites without paying is illegal
+- Using a photo from the internet without credit or permission is illegal due to copyright. 
+- A company selling your private information is illegal. 
+- Plagiarism which is copying your code from the internet is wrong. 
+- Social media collecting kids’ information is unethical and illegal. 
+
+# **Safe Computing**
+**PII (Personally Identifiable Information):**
+- Social Security Number
+- Age
+- Race
+- Phone Number
+- Date of Birth
+- Email Address
+- Mailing Address
+- Medical Information
+- Credit Card Information
+
+**Note:** PII can be used to impersonate someone or steal identity. 
+
+Many websites collect data that are PII. They are used for practical use of the internet and show people some recommendations and etc. 
+
+**Cookies** - Are information that you give your consent to that almost every website has. These cookies are used to learn more about you and give you a recommendation, idea or etc. that is about the websites purpose. 
+
+**Note:** Once information enters the internet, it is very hard to erase them. 
+
+In order to use a device there needs to be authentication. 
+Authentication measures:
+- **Strong passwords**
+    - 10 or more characters
+    - Symbol
+    - Number
+    - Lowercase and Uppercase letters
+        - Not birthdays, 12345678, passwords, etc.
+- **Multi-factor authentication**
+    - When you need to enter a website with your password and a one time code sent to your phone
+    - So it is to confirm your identity. 
+
+**Virus and Malvare**
+- **Virus:** Duplicates itself to gain access to a website
+- **Malware:** Infiltrate a system by acting as legitimate programs or by attaching itself to legitimate programs
+
+**Note:** People must do virus scans on their computers. 
+
+**Encryption and Decryption:**
+- **Encryption** is the process of encoding data to prevent unauthorized access. 
+- **Decryption** is the process of decoding this encrypted data. 
+
+**2 Types of Encryption:**
+- **Symmetric**
+    - Both the sender and the receiver now the code’s encryption details. 
+- **Asymmetric**
+    - Both the sender and the receiver don’t know how to decrypt the code. 
+    - There is a public key for encrypting and a private key for decrypting
+
+**Phising:**
+- Phising is people tricking people into clicking a link or opening an attachment. 
+- Phising emails look like
+    - Your bank
+    - Credit card company
+    - Social networking site
+    - Online store
+
+**Keylogging:**
+- Keylogging is recording every keystroke that you made on your computer to gain access to your passwords and important information. 
+
+**Rouge Access Point:**
+- A wireless network that can give unauthorized access to secure networks. 
