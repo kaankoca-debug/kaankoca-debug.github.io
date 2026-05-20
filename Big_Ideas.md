@@ -386,3 +386,13 @@ I used a **screen variable to navigate between all the pages** of the app. I mad
 The **check screen was a huge problem for me**. It took more time than it took me to write the code for the whole program because it was a logic error. I couldn’t automatically update the items entered by the user. They always had to press the My Basket button to update it. Then I used **@State and created many variables to update automatically**. After this problem I had a **problem with writing every item one by one** while checking if the user ordered those items. I used **ForEach** to solve this problem. 
 
 <br>
+
+## [Swift AquaTrack]()
+**Collaboration:** 
+I worked on this project **alone**. It helped me focus on my own ideas and I felt confident because I already had experience with Swift from my previous projects.
+
+**Program Function and Purpose:** The program is a **water tracking app**. The user sets a **daily goal** in ml and logs their water intake with **different drink sizes**. They can then check their progress to see if they reached their goal.
+
+**Program Design and Development:** I used a **screen variable** to navigate between pages like my previous projects. I made a **list for drink quantities** and wrote two functions for the summary and the total. The hardest part was handling the goal input and converting the text into a valid number.
+
+**Identifying and Correcting Errors:** My main problem was the **goal input**. The app didn't work correctly when the user entered something invalid. I fixed this using if let and added a fail screen for wrong entries. After that everything worked fine.
