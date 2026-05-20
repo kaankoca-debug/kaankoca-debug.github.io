@@ -3841,3 +3841,512 @@
         }
     }
     }
+
+<br>
+
+## Swift AquaTrack
+
+<img src="PHOTO&GIF/Swift-1-AquaTrack-Documentary_AppCopy30.png" width="600">
+
+    //18/05/2026
+    import SwiftUI
+    struct ContentView: View {
+    @State var screen = "main"
+    
+    @State var goalInput = ""
+    @State var dailyGoal = 0
+    
+    let amounts = [100, 200, 300, 500]
+    @State var logList = [0, 0, 0, 0]
+    let labels = ["Small Sip 💧", "Regular Glass 🥛", "Big Glass 🫗", "Bottle 🍶"]
+    
+    @State var totalWater = 0
+    @State var summaryList = [""]
+    @State var discount = false
+    
+    let tip = "Stay consistent! Drink water every hour. 💙"
+    
+    func runSummary() {
+        summaryList = []
+        if logList[0] > 0 { summaryList.append("Small Sip (100ml): \(logList[0])x - \(logList[0] * 100)ml") }
+        if logList[1] > 0 { summaryList.append("Regular Glass (200ml): \(logList[1])x - \(logList[1] * 200)ml") }
+        if logList[2] > 0 { summaryList.append("Big Glass (300ml): \(logList[2])x - \(logList[2] * 300)ml") }
+        if logList[3] > 0 { summaryList.append("Bottle (500ml): \(logList[3])x - \(logList[3] * 500)ml") }
+    }
+    
+    func runTotal() {
+        totalWater = 0
+        for i in 0..<amounts.count {
+            if logList[i] > 0 {
+                totalWater += logList[i] * amounts[i]
+            }
+        }
+    }
+    
+    var body: some View {
+        if screen == "main" {
+            ZStack {
+                Color.cyan
+                    .opacity(0.3)
+                
+                VStack {
+                    Text("Welcome to AquaTrack 💧")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -400)
+                        .foregroundStyle(.blue)
+                    
+                    Button("Start Tracking 🚀") {
+                        screen = "setGoal"
+                    }
+                    .padding()
+                    .frame(width: 200)
+                    .background(.blue)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                    
+                    Button("What is AquaTrack? ℹ️") {
+                        screen = "info"
+                    }
+                    .padding()
+                    .frame(width: 200)
+                    .background(.teal)
+                    .foregroundStyle(.white)
+                    .cornerRadius(10)
+                    .bold()
+                }
+            }
+        }
+        
+        else if screen == "info" {
+            ZStack {
+                Color.cyan
+                    .opacity(0.3)
+                
+                VStack {
+                    Text("About AquaTrack ℹ️")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -300)
+                        .foregroundStyle(.blue)
+                    
+                    Text("AquaTrack helps you stay hydrated")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    Text("by tracking your daily water intake.")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    Text("Set your own daily goal,")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    Text("log every sip, and see your progress!")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    Text("Staying hydrated improves focus,")
+                        .bold()
+                        .foregroundStyle(.blue)
+                    
+                    Text("energy, and overall health. 💙")
+                        .bold()
+                        .foregroundStyle(.blue)
+                    
+                    Button("Back") {
+                        screen = "main"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.indigo)
+                    .foregroundStyle(.white)
+                    .cornerRadius(15)
+                    .bold()
+                }
+            }
+        }
+        
+        else if screen == "setGoal" {
+            ZStack {
+                Color.cyan
+                    .opacity(0.3)
+                
+                VStack {
+                    Text("Set Your Daily Goal 🎯")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -300)
+                        .foregroundStyle(.blue)
+                    
+                    Text("How much water do you want to drink today?")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    Text("Enter your goal in ml (example: 2000)")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    HStack {
+                        TextField("Enter goal in ml", text: $goalInput)
+                            .frame(width: 200)
+                            .keyboardType(.numberPad)
+                        
+                        Button("OK") {
+                            if let parsed = Int(goalInput) {
+                                if parsed > 0 {
+                                    dailyGoal = parsed
+                                    screen = "tracker"
+                                } else {
+                                    screen = "goalFail"
+                                }
+                            } else {
+                                screen = "goalFail"
+                            }
+                        }
+                        .padding()
+                        .frame(width: 80)
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                    }
+                    
+                    Button("Back") {
+                        screen = "main"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.indigo)
+                    .foregroundStyle(.white)
+                    .cornerRadius(15)
+                    .bold()
+                }
+            }
+        }
+        
+        else if screen == "goalFail" {
+            ZStack {
+                Color.cyan
+                    .opacity(0.3)
+                
+                VStack {
+                    Text("❌ Invalid Goal ❌")
+                        .font(.title)
+                        .bold()
+                        .foregroundStyle(.blue)
+                    
+                    Text("Please enter a valid number")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    Text("greater than 0 (example: 2000)")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    Button("Try Again") {
+                        goalInput = ""
+                        screen = "setGoal"
+                    }
+                    .padding()
+                    .frame(width: 160)
+                    .background(.indigo)
+                    .foregroundStyle(.white)
+                    .cornerRadius(15)
+                    .bold()
+                }
+            }
+        }
+        
+        else if screen == "tracker" {
+            ZStack {
+                Color.cyan
+                    .opacity(0.3)
+                
+                VStack {
+                    Text("Log Your Water 💧")
+                        .font(.title)
+                        .bold()
+                        .offset(y: -200)
+                        .foregroundStyle(.blue)
+                    
+                    Text("Daily Goal: \(dailyGoal) ml")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    HStack {
+                        Button("Small Sip 💧") {
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("+") {
+                            logList[0] += 1
+                        }
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("-") {
+                            if logList[0] > 0 {
+                                logList[0] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("\(logList[0])") {
+                        }
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                    }
+                    
+                    Text("100ml each")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    HStack {
+                        Button("Regular Glass 🥛") {
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.teal)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("+") {
+                            logList[1] += 1
+                        }
+                        .padding()
+                        .background(.teal)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("-") {
+                            if logList[1] > 0 {
+                                logList[1] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.teal)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("\(logList[1])") {
+                        }
+                        .padding()
+                        .background(.teal)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                    }
+                    
+                    Text("200ml each")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    HStack {
+                        Button("Big Glass 🫗") {
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("+") {
+                            logList[2] += 1
+                        }
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("-") {
+                            if logList[2] > 0 {
+                                logList[2] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("\(logList[2])") {
+                        }
+                        .padding()
+                        .background(.blue)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                    }
+                    
+                    Text("300ml each")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    HStack {
+                        Button("Bottle 🍶") {
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.teal)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("+") {
+                            logList[3] += 1
+                        }
+                        .padding()
+                        .background(.teal)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("-") {
+                            if logList[3] > 0 {
+                                logList[3] -= 1
+                            }
+                        }
+                        .padding()
+                        .background(.teal)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                        
+                        Button("\(logList[3])") {
+                        }
+                        .padding()
+                        .background(.teal)
+                        .foregroundStyle(.white)
+                        .cornerRadius(10)
+                        .bold()
+                    }
+                    
+                    Text("500ml each")
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    HStack {
+                        Button("Back") {
+                            screen = "setGoal"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        
+                        Button("My Progress 📊") {
+                            runSummary()
+                            runTotal()
+                            screen = "summary"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                    }
+                }
+            }
+        }
+        
+        else if screen == "summary" {
+            ZStack {
+                Color.cyan
+                    .opacity(0.3)
+                
+                VStack {
+                    Text("Your Progress 📊")
+                        .font(.title)
+                        .bold()
+                        .foregroundStyle(.blue)
+                    
+                    ForEach(summaryList, id: \.self) { item in
+                        Text(item)
+                            .bold()
+                            .foregroundStyle(.teal)
+                    }
+                    
+                    Text("Total: \(totalWater) ml / \(dailyGoal) ml")
+                        .bold()
+                        .foregroundStyle(.blue)
+                    
+                    if totalWater >= dailyGoal {
+                        Text("✅ Goal Reached! Amazing work! ✅")
+                            .bold()
+                            .foregroundStyle(.green)
+                    } else {
+                        Text("⏳ \(dailyGoal - totalWater) ml left to reach your goal")
+                            .bold()
+                            .foregroundStyle(.orange)
+                    }
+                    
+                    if totalWater == 0 {
+                        Text("⚠️ You haven't logged any water yet!")
+                            .bold()
+                            .foregroundStyle(.red)
+                    }
+                    
+                    Text(tip)
+                        .bold()
+                        .foregroundStyle(.teal)
+                    
+                    Text("💙 Stay hydrated, stay healthy! 💙")
+                        .bold()
+                        .foregroundStyle(.blue)
+                    
+                    HStack {
+                        Button("Back") {
+                            screen = "tracker"
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                        
+                        Button("Reset Day 🔄") {
+                            logList = [0, 0, 0, 0]
+                            totalWater = 0
+                            summaryList = [""]
+                            screen = "setGoal"
+                            goalInput = ""
+                            dailyGoal = 0
+                        }
+                        .padding()
+                        .frame(width: 160)
+                        .background(.indigo)
+                        .foregroundStyle(.white)
+                        .cornerRadius(15)
+                        .bold()
+                    }
+                }
+            }
+        }
+    }
+    }
