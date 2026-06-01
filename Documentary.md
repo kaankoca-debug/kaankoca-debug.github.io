@@ -3954,6 +3954,8 @@
                     Text("energy, and overall health. 💙")
                         .bold()
                         .foregroundStyle(.blue)
+
+                    //THESE TEXTS WERE WRITTEN BY AI. 
                     
                     Button("Back") {
                         screen = "main"
@@ -4005,6 +4007,9 @@
                                 screen = "goalFail"
                             }
                         }
+                        //I USED AI AND REDDIT TO LEARN ABOUT IF LET.
+
+                        
                         .padding()
                         .frame(width: 80)
                         .background(.blue)
