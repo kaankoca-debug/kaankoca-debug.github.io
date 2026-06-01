@@ -189,4 +189,12 @@ I would like to explore the idea of creating music by adding up different audio 
 
 **I USED CHATGPT WHILE WRITING THE "WHAT IS AQUATRACK PAGE AND LEARNED ABOUT IF LET WITH REDDIT AND CHATGPT."
 
+## Project Report - AquaTrack
+Many people forget to drink enough water during the day without realizing it. Dehydration affects focus, energy and overall health. AquaTrack was made to solve this by giving users a simple way to track their daily water intake on their phone.
+
+The app lets the user set their own daily water goal in ml and log their water intake throughout the day using four drink sizes: small sip, regular glass, big glass and bottle. After logging, the user can check their progress screen to see the total amount they drank, how much is left and whether they reached their goal or not.
+The biggest problem I ran into was the goal input. When the user entered something that wasn't a number the app broke. I fixed this using if let to safely convert the input and added a fail screen for invalid entries.
+
+On the technical side I used a screen variable to move between pages and a list to keep track of how many of each drink size the user logged. I wrote two functions for the app. The first one, runSummary, goes through the list and builds a readable summary of everything the user logged. The second one, runTotal, adds up all the drinks and calculates the total water in ml. I also used conditionals to check if the user hit their goal and to catch any bad inputs.
+
 <br>
