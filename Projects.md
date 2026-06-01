@@ -187,4 +187,6 @@ I would like to explore the idea of creating music by adding up different audio 
 ## [Swift AquaTrack](https://github.com/kaankoca-debug/kaankoca-debug.github.io/blob/main/Projects/Swift/My%20App%20copy%2030.swiftpm.zip)
 <img src="PHOTO&GIF/Swift-1-AquaTrack-Projects_AppCopy30.png" width="600"> <img src="PHOTO&GIF/Swift-2-AquaTrack-Projects_AppCopy30.png" width="600"> <img src="PHOTO&GIF/Swift-3-AquaTrack-Projects_AppCopy30.png" width="600"> <img src="PHOTO&GIF/Swift-4-AquaTrack-Projects_AppCopy30.png" width="600"> <img src="PHOTO&GIF/Swift-5-AquaTrack-Projects_AppCopy30.png" width="600">
 
+**I USED CHATGPT WHILE WRITING THE "WHAT IS AQUATRACK PAGE AND LEARNED ABOUT IF LET WITH REDDIT AND CHATGPT."
+
 <br>
